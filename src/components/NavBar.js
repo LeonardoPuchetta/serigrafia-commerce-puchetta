@@ -22,7 +22,7 @@ export default function NavBar() {
               width="30"
               height="30"
               className="d-inline-block align-top"
-            />{' '}Serigrafias ConQuePoquito
+            />{' '}ConQuePoquito
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
