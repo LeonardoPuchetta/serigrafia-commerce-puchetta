@@ -1,0 +1,20 @@
+a{
+    position: relative;
+    color:black
+}
+
+svg{
+    color:black;
+}
+
+span{
+    position:absolute;
+    left: 75%;
+    bottom:40%;
+    color:black;
+    background-color: rgb(58, 92, 121);
+    border-radius: 50%;
+    padding: 0 0.15rem 0 0.15rem;
+    font-size: 10px;
+    
+}
