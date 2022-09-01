@@ -1,12 +1,21 @@
-import React from 'react'
+import React from 'react';
+import ItemCount from '../ItemCount';
 
-export default function ItemListContainer() {
+export default function ItemListContainer(props) {
+
+const {gretting} = props;
+
+const onAdd = (number) => {
+    alert("Has agregado " + number + " productos al carrito.");
+}
+
   return (
     <>
-    <h3>Lista de Productos</h3>
-    <div>
-        Aca va la lista de productos
-    </div>
+     
+        <div>
+            {gretting}
+        </div>
+        <ItemCount initial={5} stock={3} onAdd={onAdd}/>
     </>
   )
 }

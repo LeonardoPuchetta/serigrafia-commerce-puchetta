@@ -1,0 +1,33 @@
+.item-count{
+    display:flex;
+    flex-direction: column;
+}
+
+.row-btn-count{
+    display: flex;
+    flex-direction: row;
+    width: 12rem;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    
+
+}
+
+.btn-count{
+    width: 3rem;
+}
+
+.row-btn-add{
+    display: flex;
+    width: 12rem;
+    margin-top: 1rem;
+
+}
+.btn-add{
+    width: 12rem;
+}
+
+
+

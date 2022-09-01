@@ -7,14 +7,15 @@ svg{
     color:black;
 }
 
-span{
+.span-cart{
     position:absolute;
     left: 75%;
     bottom:40%;
     color:black;
-    background-color: rgb(58, 92, 121);
-    border-radius: 50%;
+    background-color: red;
+    border-radius: 1.2rem;
     padding: 0 0.15rem 0 0.15rem;
     font-size: 10px;
+    font-weight: bold;
     
 }

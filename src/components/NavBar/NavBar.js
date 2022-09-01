@@ -49,7 +49,7 @@ const isLoging = false ;
         </Nav> </> : <></> }
         <Nav pullright="true">
           <Nav.Link href="#link">
-            <CartWidget/>
+            <CartWidget numberProducts={6}/>
           </Nav.Link>
         </Nav>
         
