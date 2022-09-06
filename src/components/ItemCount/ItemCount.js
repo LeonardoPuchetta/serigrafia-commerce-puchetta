@@ -19,6 +19,7 @@ export default function ItemCount(props) {
     const onAddItem = () =>{
         //si hay stock realizamos la adicion de count productos al carrito
         if(stock>=count){onAdd(count)}
+        setCount(0);
         
     }
  

@@ -27,17 +27,19 @@ const isLoging = false ;
               width="30"
               height="30"
               className="d-inline-block align-top"
-            />{' '}ConQuePoquito
+            />{' '}Vivero
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto" >
-          <NavDropdown title="Productos" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Remeras</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Afiches</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Parches</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4">Otros trabajos</NavDropdown.Item>
+          <NavDropdown title="Plantas" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Plantas anuales</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Plantas perennes</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">De interior</NavDropdown.Item>
           </NavDropdown>
+          <Nav.Link href="#link">Arbustos</Nav.Link>
+          <Nav.Link href="#link">Arboles</Nav.Link>
+          <Nav.Link href="#link">Huerta organica</Nav.Link>
           <Nav.Link href="#link">Quienes Somos</Nav.Link>
         </Nav>
         { !isLoging ? <>
@@ -58,4 +60,6 @@ const isLoging = false ;
 </Navbar>
     )
 }
+
+
 
