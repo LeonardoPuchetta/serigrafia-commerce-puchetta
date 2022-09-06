@@ -1,0 +1,21 @@
+.item-detail-container{
+    display: flex;
+    flex-direction: row;
+    margin : 2rem
+}
+.item-detail-image{
+    margin-right:1.5rem
+}
+
+.item-detail-info-price{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #387355;
+    font-size: 2.5rem;
+}
+
+.item-detail-info-count{
+  margin-top: 3rem;
+ 
+}
+
