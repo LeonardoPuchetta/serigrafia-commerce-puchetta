@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -20,37 +21,39 @@ const isLoging = false ;
   return (
 <Navbar  expand="lg" className='header-navbar'>
     <Container>
-      <Navbar.Brand href="#home"> 
-        <img
-              alt=""
-              src={logo}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{' '}Vivero
+      <Navbar.Brand > 
+        <Link to='/' className='navbar-link'>
+          <img
+                alt=""
+                src={logo}
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+              />{' '}Vivero
+        </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto" >
           <NavDropdown title="Plantas" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Plantas anuales</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Plantas perennes</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">De interior</NavDropdown.Item>
+              <NavDropdown.Item href="/category/plantas-anuales">Plantas anuales</NavDropdown.Item>
+              <NavDropdown.Item href="/category/plantas-perennes">Plantas perennes</NavDropdown.Item>
+              <NavDropdown.Item href="/category/plantas-interior">De interior</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="#link">Arbustos</Nav.Link>
-          <Nav.Link href="#link">Arboles</Nav.Link>
-          <Nav.Link href="#link">Huerta organica</Nav.Link>
-          <Nav.Link href="#link">Quienes Somos</Nav.Link>
+          <Nav.Link href="/category/arbustos">Arbustos</Nav.Link>
+          <Nav.Link href="/category/arboles">Arboles</Nav.Link>
+          <Nav.Link href="/category/huerta-organica">Huerta organica</Nav.Link>
+          <Nav.Link href="/about">Quienes Somos</Nav.Link>
         </Nav>
         { !isLoging ? <>
         <Nav pullright="true">
-          <Nav.Link href="#link" >signIn</Nav.Link>
+          <Nav.Link href="/register" >Registro</Nav.Link>
         </Nav>
         <Nav pullright="true">
-          <Nav.Link href="#link">login</Nav.Link>
+          <Nav.Link href="/login">Login</Nav.Link>
         </Nav> </> : <></> }
         <Nav pullright="true">
-          <Nav.Link href="#link">
+          <Nav.Link href="/">
             <CartWidget numberProducts={6}/>
           </Nav.Link>
         </Nav>

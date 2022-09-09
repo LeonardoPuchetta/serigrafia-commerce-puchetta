@@ -11,7 +11,7 @@ const onAdd = (number) => {
     alert("Has agregado " + number + " productos al carrito.");
 }
 
-console.log(item.stock)
+
 
 
 
@@ -45,7 +45,7 @@ console.log(item.stock)
         </div>
         
     </div> 
-    : <p><h1>Cargando ...</h1></p>
+    : <><h1>Cargando ...</h1></>
     }
  </>
   )
