@@ -49,18 +49,7 @@
     
         "imageUrl":"https://www.jardineriaon.com/wp-content/uploads/2018/03/Hypoestes_Phyllostachya.jpg"
     },
-    {
-        "id":"5",
-        "category": ["plantas-interior","arbustos"],
-        "name": "ANTURIO SCHERERIANUM",
-        "description":"Es una planta perenne, rizomatosa y epífita (vive sobre otras plantas). En su forma natural puede llegar a alcanzar los 60 cm de altura. El rizoma es grueso y carnoso.",
-        "price":1100,
-        "stock":10,
-        "stockStatus":true,
-        "saleStatus":false,
-    
-        "imageUrl":"https://http2.mlstatic.com/D_NQ_NP_716949-MLU26343108042_112017-O.webp"
-    },
+ 
     {
         "id":"6",
         "category": ["arboles"],

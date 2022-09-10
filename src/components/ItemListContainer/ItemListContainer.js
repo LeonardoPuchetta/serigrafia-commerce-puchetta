@@ -19,8 +19,11 @@ const [data,setData] = useState([])  ;
 
 useEffect(()=>{
 
+  //si existe categoria filtramos el array de product.category segun la misma
+
   if(idCategory !== undefined){
     customFetch(2000,products.filter(product => product.category.includes(idCategory)))
+        //obtenemos solo los productos que tienen idCategory en su array category
         .then(products=> setData(products))
         .catch(error => console.log(error))
 
@@ -32,6 +35,9 @@ useEffect(()=>{
     
   } 
 },[idCategory])
+
+
+
 
   return (
     <>
