@@ -22,7 +22,7 @@ const isLoging = false ;
 <Navbar  expand="lg" className='header-navbar'>
     <Container>
       <Navbar.Brand > 
-        <Link to='/' className='navbar-link'>
+        <Link to='/' className='navbar-link-img'>
           <img
                 alt=""
                 src={logo}
@@ -36,26 +36,28 @@ const isLoging = false ;
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto" >
           <NavDropdown title="Plantas" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/category/plantas-anuales">Plantas anuales</NavDropdown.Item>
-              <NavDropdown.Item href="/category/plantas-perennes">Plantas perennes</NavDropdown.Item>
-              <NavDropdown.Item href="/category/plantas-interior">De interior</NavDropdown.Item>
+              <Link to='/category/plantas-anuales' className='navbar-link'>Plantas anuales</Link><br/>
+              <Link to='/category/plantas-perennes' className='navbar-link'>Plantas perennes</Link><br/>
+              <Link to='/category/plantas-interior' className='navbar-link'>De interior</Link><br/>
           </NavDropdown>
-          <Nav.Link href="/category/arbustos">Arbustos</Nav.Link>
-          <Nav.Link href="/category/arboles">Arboles</Nav.Link>
-          <Nav.Link href="/category/huerta-organica">Huerta organica</Nav.Link>
-          <Nav.Link href="/about">Quienes Somos</Nav.Link>
+          
+          <Link to='/category/arbustos' className='navbar-link'>Arbustos</Link>
+          <Link to='/category/arboles' className='navbar-link'>Arboles</Link>
+          <Link to='/category/huerta-organica'className='navbar-link'>Huerta organica</Link>
+          <Link to='/about'className='navbar-link'>Quienes Somos</Link>
         </Nav>
+        
         { !isLoging ? <>
         <Nav pullright="true">
-          <Nav.Link href="/register" >Registro</Nav.Link>
+          <Link to='/register' className='navbar-link'>Registro</Link>
         </Nav>
         <Nav pullright="true">
-          <Nav.Link href="/login">Login</Nav.Link>
+          <Link to='/login' className='navbar-link'>Login</Link>
         </Nav> </> : <></> }
         <Nav pullright="true">
-          <Nav.Link href="/">
+          <Link to='/cart' className='navbar-link'>
             <CartWidget numberProducts={6}/>
-          </Nav.Link>
+          </Link>
         </Nav>
         
       </Navbar.Collapse>

@@ -4,8 +4,18 @@
     text-decoration: none;
 }
 
-.navbar-link{
+.navbar-link-img{
     text-decoration: none;
     color:#000
 
+}
+.navbar-link{
+    text-decoration: none;
+    color:#000;
+    margin: 0.42rem 0.4rem 0.4rem 0.4rem 
+}
+
+.navbar-link:hover{
+    color:rgb(187, 36, 36);
+    text-decoration: none;
 }
