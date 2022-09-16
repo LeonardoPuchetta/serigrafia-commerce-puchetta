@@ -1,14 +1,18 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './ItemDetail.css';
-
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 import ItemCount from '../ItemCount';
 
 export default function ItemDetail(props) {
 
 const {item}= props;
 
-const onAdd = (number) => {
-    alert("Has agregado " + number + " productos al carrito.");
+const [itemCount,setItemCount] = useState(0);
+
+const onAdd = (quantityToAdd) => {
+    setItemCount(quantityToAdd);
+    
 }
 
 
@@ -39,7 +43,8 @@ const onAdd = (number) => {
                 <h4>{item.stock} unidades en stock</h4>
             </div>
             <div className='item-detail-info-count'>
-                <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>  
+                { (itemCount === 0 ) ? <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/> 
+                : <Link to='/cart'><Button>Ir al carrito</Button></Link>}  
             </div>
       
         </div>

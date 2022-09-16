@@ -38,7 +38,8 @@ export default function ItemCount(props) {
             </div>
         </div>
         <div className='row-btn-add' >
-                <Button className='btn-add' onClick={onAddItem} >Agregar al carrito</Button>
+            { stock && count ? <Button className='btn-add' onClick={onAddItem} >Agregar al carrito</Button> :
+            <Button className='btn-add' onClick={onAddItem} disabled>Agregar al carrito</Button>}
         </div>
     </div>
     </>
