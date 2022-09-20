@@ -8,7 +8,6 @@ export default function ItemList(props) {
     //recibimos array con la info de items 
 const {items} = props;
 
-console.log(items)
 
   return (
     <>

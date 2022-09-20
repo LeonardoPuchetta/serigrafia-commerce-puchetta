@@ -13,7 +13,7 @@ export default function ItemListContainer(props) {
 
 const {idCategory} = useParams(); 
 
-console.log(idCategory);
+// console.log(idCategory);
 
 const [data,setData] = useState([])  ;
 

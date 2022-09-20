@@ -15,7 +15,7 @@
     {
         "id":"2",
         "category": ["arboles"],
-        "name": "Pino",
+        "name": "planta",
         "description":"Son árboles que pueden alcanzar hasta 30 m de altura, con un tronco recto sobre el que se disponen varios pisos de ramas en posición horizontal. La copa suele ser piramidal, si bien en los ejemplares más antiguos se pierde esta forma.",
         "price":1500,
         "stock":10,

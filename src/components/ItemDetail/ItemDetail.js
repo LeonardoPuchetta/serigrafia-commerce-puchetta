@@ -4,14 +4,24 @@ import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import ItemCount from '../ItemCount';
 
+import useCart from './../../hooks/useCart'
+
 export default function ItemDetail(props) {
 
 const {item}= props;
+//traemos el contexto mediante el hook
+const ctx = useCart();
+
 
 const [itemCount,setItemCount] = useState(0);
 
 const onAdd = (quantityToAdd) => {
+
     setItemCount(quantityToAdd);
+    //usamos la funcion del contexto para agregar productos 
+    //al estado global cart
+    ctx.addItem(item,quantityToAdd);
+    
     
 }
 
@@ -23,7 +33,7 @@ const onAdd = (quantityToAdd) => {
     <>
     { item.imageUrl ? 
     
-    <div className='item-detail-container'>
+    <div className='item-detail-container '>
 
         <div  className='item-detail-image'>
             <img src={item.imageUrl}/>
