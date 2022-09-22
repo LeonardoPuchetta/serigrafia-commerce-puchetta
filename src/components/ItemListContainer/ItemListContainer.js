@@ -7,6 +7,10 @@ import ItemList from '../ItemList';
 import products from './../../utils/products'
 import customFetch from '../../utils/customFetch';
 
+import { db } from '../../utils/firebaseConfig';
+import { collection, getDocs } from "firebase/firestore";
+
+
 import './ItemListContainer.css'
 
 export default function ItemListContainer(props) {
@@ -17,8 +21,17 @@ const {idCategory} = useParams();
 
 const [data,setData] = useState([])  ;
 
-useEffect(()=>{
+// useEffect(async () =>{
+//   const querySnapshot = await getDocs(collection(db, "products"));
+//   querySnapshot.forEach((doc) => {
+//   console.log(`${doc.id} => ${doc.data()}`);
+// });
 
+// },[data])
+
+
+
+useEffect( ()=>{
   //si existe categoria filtramos el array de product.category segun la misma
 
   if(idCategory !== undefined){

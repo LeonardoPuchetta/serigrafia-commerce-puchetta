@@ -19,7 +19,7 @@ export default function CartProvider(props){
             "item":item,
             "quantity":quantity
         }
-        console.log(newProduct)
+        
 
        if (isInCart(item.id)===false){
           setCart(cart => [...cart,newProduct]);
@@ -42,7 +42,7 @@ export default function CartProvider(props){
     }
 
     // funcion para vaciar carrito
-    const clear = () =>{
+    const clearCart = () =>{
         setCart([]);
         
     }
@@ -61,11 +61,46 @@ export default function CartProvider(props){
         })
 
         return isIn
-        
-
     }
 
-    return <CartContext.Provider value={{cart,clear,removeItem,addItem}}>{children}</CartContext.Provider>
+    const getTotalProducts = () =>{
+
+        let total = 0;
+
+        Array.from(cart).forEach((product)=>{
+            
+            total += product.quantity
+        });
+        
+        return total 
+    }
+
+    const getTotalPriceItem = (item,quantity) => {
+            return (item.price*quantity)
+    }
+
+    const getTotalPrice = () =>{
+
+        let total = 0;
+
+        Array.from(cart).forEach((product)=>{
+            
+            total += product.item.price
+        });
+        
+        return total 
+    }
+
+
+
+    return <CartContext.Provider 
+            value={{cart,clearCart,removeItem,
+                    addItem,getTotalProducts,
+                    getTotalPriceItem,getTotalPrice,
+
+                    }}>
+                {children}
+            </CartContext.Provider>
 }
 
 

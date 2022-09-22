@@ -1,0 +1,24 @@
+.container-cart{
+    display:flex;
+    flex-direction: column;
+}
+.btn-options{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    
+}
+.products-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin :2rem 0 2rem 0;
+}
+
+
+
+.order-summary{
+   
+   
+
+}

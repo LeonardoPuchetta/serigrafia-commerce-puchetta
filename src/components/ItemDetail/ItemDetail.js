@@ -16,13 +16,11 @@ const ctx = useCart();
 const [itemCount,setItemCount] = useState(0);
 
 const onAdd = (quantityToAdd) => {
-
     setItemCount(quantityToAdd);
     //usamos la funcion del contexto para agregar productos 
     //al estado global cart
     ctx.addItem(item,quantityToAdd);
-    
-    
+
 }
 
 
@@ -54,7 +52,9 @@ const onAdd = (quantityToAdd) => {
             </div>
             <div className='item-detail-info-count'>
                 { (itemCount === 0 ) ? <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/> 
-                : <Link to='/cart'><Button>Ir al carrito</Button></Link>}  
+                : <Link to='/cart'><Button>Terminar compra</Button></Link>} 
+
+                <Link to='/'><Button>Continuar comprando</Button></Link> 
             </div>
       
         </div>

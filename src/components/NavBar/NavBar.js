@@ -56,7 +56,7 @@ const isLoging = false ;
         </Nav> </> : <></> }
         <Nav pullright="true">
           <Link to='/cart' className='navbar-link'>
-            <CartWidget numberProducts={6}/>
+            <CartWidget/>
           </Link>
         </Nav>
         

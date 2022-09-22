@@ -4,12 +4,12 @@
         "category": ["plantas-interior"],
         "name": "Filicopsida",
         "description":"A esta clase pertenecen la mayoría de los helechos y su diversidad es enorme: abarca desde pequeñas plantas herbáceas a formas arborescentes en zonas tropicales. Engloba a 19 órdenes y unas 10000 especies. Las frondes, de crecimiento circinado, aparecen en grupos y apenas existen especies con frondes solitarias; están formadas por un sólo segmento, nunca por una parte fértil y otra estéril, aunque hay alguna especie, como Osmunda regalis, en la que los esporangios aparecen en zonas diferenciadas de la fronde; Blechnum spicant tiene esporangios en frondes diferenciadas. Los esporangios suelen estar en el envés de la fronde, reúnidos en soros y protegidos por un indusio o pseudoindusio; su pared está formada por una capa de células en la que se diferencian unas más engrosadas que son las que forman el anillo mecánico, mecanismo de dehiscencia del esporangio. Los protalos son epígeos, verdes y por tanto autótrofos.",
-        "price":85,
+        "price":100,
         "stock":103,
         "stockStatus":true,
         "saleStatus":false,
     
-        "imageUrl":"http://viveroarguello.com.ar/wp-content/uploads/2016/10/helecho.jpg"
+        "imageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9VJCnSDUWczJRfPW449v-8yj87Q2QfLASK7z1Eb--8UE65sr0bIhtb6oMafSDDAIqVuM&usqp=CAU"
       
     },
     {
