@@ -4,6 +4,9 @@ import customFetch from '../../utils/customFetch';
 import products from '../../utils/products';
 import { useParams } from 'react-router-dom';
 
+import { db } from '../../utils/firebaseConfig';
+import { collection, getDoc ,doc } from "firebase/firestore";
+
 import ItemDetail from '../ItemDetail';
 
 
@@ -13,14 +16,23 @@ const [dato,setDato] = useState({});
 
 const {idItem} = useParams();
 
+//constante para query
+const docRef = doc(db, "products", idItem);
 
 useEffect(()=>{
 
-  customFetch(2000,products.find(productItem => productItem.id == idItem))
-  .then(result => setDato(result))
-  .catch(error => console.log(error))
+  const querySnapshot = getDoc(docRef).then(result =>{
+    const dataFromFirestore = {
+      id:result.id,
+      ...result.data()
+    }
+    setDato(dataFromFirestore)
+  }).catch(error => {
+    console.log(error)
+  })
 
-},[idItem])
+
+},[])
 
 
  

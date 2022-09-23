@@ -6,49 +6,41 @@ import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList';
 import products from './../../utils/products'
 import customFetch from '../../utils/customFetch';
-
 import { db } from '../../utils/firebaseConfig';
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs ,query, where } from "firebase/firestore";
 
 
-import './ItemListContainer.css'
+import './ItemListContainer.css';
+
 
 export default function ItemListContainer(props) {
 
+const [data,setData] = useState([]);
 const {idCategory} = useParams(); 
 
-// console.log(idCategory);
 
-const [data,setData] = useState([])  ;
+useEffect(  () => {
 
-// useEffect(async () =>{
-//   const querySnapshot = await getDocs(collection(db, "products"));
-//   querySnapshot.forEach((doc) => {
-//   console.log(`${doc.id} => ${doc.data()}`);
-// });
-
-// },[data])
-
-
-
-useEffect( ()=>{
-  //si existe categoria filtramos el array de product.category segun la misma
-
-  if(idCategory !== undefined){
-    customFetch(2000,products.filter(product => product.category.includes(idCategory)))
-        //obtenemos solo los productos que tienen idCategory en su array category
-        .then(products=> setData(products))
-        .catch(error => console.log(error))
-
-  } else {
+    let queryConfig ;
+    //configuracion de la query 
+    if (idCategory !== undefined){
+        queryConfig = query(collection(db,'products'),where('category','array-contains',idCategory))
+    } else {
+      queryConfig = query(collection(db,'products'))
+    }
+    //traemos los datos con la query apropiada
+    const querySnapshot = getDocs(queryConfig).then(result =>{
+    //usamos .docs para pasar de datos binarios a objetos js
+    const dataFromFirestore = result.docs.map( item => ({
+                      id:item.id,
+                      ...item.data()
+          }))
+    setData(dataFromFirestore)
+    }).catch(error =>{
+      console.log(error)
+    })
     
-      customFetch(2000,products)
-        .then(products => setData(products))
-        .catch(error => console.log(error))
-    
-  } 
 },[idCategory])
-
 
 
 

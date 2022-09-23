@@ -85,7 +85,7 @@ export default function CartProvider(props){
 
         Array.from(cart).forEach((product)=>{
             
-            total += product.item.price
+            total += product.item.price*product.quantity
         });
         
         return total 

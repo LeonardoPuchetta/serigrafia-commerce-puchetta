@@ -5,18 +5,20 @@ import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 import CartItem from '../CartItem';
-import './Cart.css'
+import './Cart.css';
+
 
 export default function Cart() {
+
 
 const {cart,getTotalProducts
   ,getTotalPrice,clearCart} = useCart();
 
 
-const styleImage = {
-  'width': '10rem',
-  'height':'10rem'
-}
+// const styleImage = {
+//   'width': '10rem',
+//   'height':'10rem'
+// }
 
   return (
     <>
@@ -26,8 +28,8 @@ const styleImage = {
     <div className='container container-cart'>
 
         <div className='btn-options'>
-            <Link to='/'><Button>Continuar comprando</Button></Link>
-            <Button onClick={()=>{clearCart()}}>Vaciar carrito</Button> 
+            <Link to='/'><Button variant="outline-success">Continuar comprando</Button></Link>
+            <Button  variant="outline-danger" onClick={()=>{clearCart()}}>Vaciar carrito</Button> 
         </div>
 
         <div className='products-list'>
@@ -40,16 +42,16 @@ const styleImage = {
                     )
                 })}
           </div>
-          <div className='order-summary'>
-                <h5>Resumen de compra</h5>
+          <div className='order-summary border'>
+                <h5>Resumen de compra</h5><hr></hr>
                 <div className='order-summary-total-products'>
                     Numero de productos : {getTotalProducts()}
                 </div>
                 <div className='order-summary-total-products'>
-                    <strong>Total : </strong> {getTotalPrice()} $
-                </div>
+                    <strong>Monto total : </strong> {getTotalPrice()} $
+                </div><hr></hr>
                 <div>
-                  <Button>Continuar compra</Button>
+                  <Button variant="outline-success">Continuar compra</Button>
                 </div>
           </div>
         </div>
@@ -58,7 +60,7 @@ const styleImage = {
     : <>
       <div className='container'>
            <h5>El carrito esta vacio</h5> 
-           <Link to='/'><Button>Continuar comprando</Button></Link>      
+           <Link to='/'><Button variant="success">Continuar comprando</Button></Link>      
       </div>
       </>}
     </>

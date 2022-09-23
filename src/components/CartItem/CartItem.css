@@ -3,11 +3,20 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 0.5rem;
+    padding:0.2rem;
     
     
+    
+}
+.product-detail-name{
+    margin:0.5rem;
 }
 
 .product-detail-count{
     display: flex;
     flex-direction: column;
+    margin :0.5rem
+}
+.product-detail-delete{
+    margin:0.5rem
 }
