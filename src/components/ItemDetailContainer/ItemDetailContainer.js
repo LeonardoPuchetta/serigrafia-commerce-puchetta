@@ -1,11 +1,8 @@
 import React,{useState,useEffect} from 'react'
-
-import customFetch from '../../utils/customFetch';
-import products from '../../utils/products';
 import { useParams } from 'react-router-dom';
 
 import { db } from '../../utils/firebaseConfig';
-import { collection, getDoc ,doc } from "firebase/firestore";
+import {  getDoc ,doc } from "firebase/firestore";
 
 import ItemDetail from '../ItemDetail';
 
@@ -33,10 +30,6 @@ useEffect(()=>{
 
 
 },[])
-
-
- 
-
 
   return (
     <ItemDetail item={dato}/> 

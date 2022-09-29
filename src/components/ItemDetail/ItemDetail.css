@@ -3,9 +3,17 @@
     flex-direction: row;
     margin : 2rem
 }
-.item-detail-image{
+.item-detail-image-container{
     margin-right:1.5rem;
+    width: 50%;
+    height: auto;
     
+    
+}
+
+.item-detail-image{
+    width: 100%;
+    height: auto;
 }
 
 .item-detail-info-price{
@@ -20,3 +28,10 @@
  
 }
 
+.btn-finish{
+ margin-right:1rem;
+ 
+}
+.btn-continue{
+
+}

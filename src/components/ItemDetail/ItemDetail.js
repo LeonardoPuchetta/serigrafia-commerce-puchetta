@@ -33,8 +33,8 @@ const onAdd = (quantityToAdd) => {
     
     <div className='item-detail-container '>
 
-        <div  className='item-detail-image'>
-            <img src={item.imageUrl}/>
+        <div  className='item-detail-image-container'>
+            <img src={item.imageUrl} alt={item.name} className='item-detail-image'/>
         </div>
 
         <div  className='item-detail-info'>
@@ -52,9 +52,9 @@ const onAdd = (quantityToAdd) => {
             </div>
             <div className='item-detail-info-count'>
                 { (itemCount === 0 ) ? <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/> 
-                : <Link to='/cart'><Button>Terminar compra</Button></Link>} 
+                : <Link to='/cart'><Button className='btn-finish' variant="outline-warning">Terminar compra</Button></Link>} 
 
-                <Link to='/'><Button>Continuar comprando</Button></Link> 
+                <Link to='/'><Button className='btn-continue' variant="outline-info">Continuar comprando</Button></Link> 
             </div>
       
         </div>

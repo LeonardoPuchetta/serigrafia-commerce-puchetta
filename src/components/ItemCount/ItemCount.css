@@ -9,10 +9,6 @@
     width: 12rem;
     justify-content: space-between;
     align-items: center;
-    
-    
-    
-
 }
 
 .btn-count{
@@ -22,8 +18,7 @@
 .row-btn-add{
     display: flex;
     width: 12rem;
-    margin-top: 1rem;
-
+    margin: 1rem 0rem 1rem 0;
 }
 .btn-add{
     width: 12rem;

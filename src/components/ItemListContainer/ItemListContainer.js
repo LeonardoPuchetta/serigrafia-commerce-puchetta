@@ -1,11 +1,6 @@
 import React , {useState,useEffect}from 'react';
-import ItemCount from '../ItemCount';
-
 import { useParams } from 'react-router-dom';
-
 import ItemList from '../ItemList';
-import products from './../../utils/products'
-import customFetch from '../../utils/customFetch';
 import { db } from '../../utils/firebaseConfig';
 import { collection, getDocs ,query, where } from "firebase/firestore";
 
@@ -19,7 +14,7 @@ const [data,setData] = useState([]);
 const {idCategory} = useParams(); 
 
 
-useEffect(  () => {
+useEffect( () => {
 
     let queryConfig ;
     //configuracion de la query 

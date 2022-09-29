@@ -12,6 +12,7 @@ export default function ItemCount(props) {
 
     const [count,setCount] = useState(initial);
 
+
     const countIncrement = () =>{if (count<stock) {setCount(count+1)}}
 
     const countDecrement = () => {if (count>0) {setCount(count-1)}}
@@ -38,9 +39,11 @@ export default function ItemCount(props) {
             </div>
         </div>
         <div className='row-btn-add' >
-            { stock && count ? <Button className='btn-add' onClick={onAddItem} >Agregar al carrito</Button> :
-            <Button className='btn-add' onClick={onAddItem} disabled>Agregar al carrito</Button>}
+            { stock && count ? <Button className='btn-add' onClick={onAddItem} variant="outline-success">Agregar al carrito</Button> :
+            <Button className='btn-add' onClick={onAddItem} variant="outline-success" disabled>Agregar al carrito</Button>}
         </div>
+        
+       
     </div>
     </>
   )
