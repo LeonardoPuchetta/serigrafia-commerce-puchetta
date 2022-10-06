@@ -1,8 +1,18 @@
 # Proyecto de curso React de Coderhouse
 
-El proyecto se trata de un e-commerce para un vivero.El mismo consta de una single page (Home) en la que se renderizan los contenedores con los componentes desarrollados.
+El proyecto se trata de un e-commerce para un vivero , en este caso un negocio imaginario con un nombre generico.El mismo consta de una single page (Home) en la que se renderizan los contenedores con los componentes desarrollados.
 
+- Tenemos una pagina principal donde se listan todos los productos de la base de datos sin importar su categoria y luego a traves de los links del navbar podemos acceder a los listados de productos por categoria .
 
+- Cada componente del listado nos permite acceder al detalle del producto con una descripcion,informacion de stock disponible y la posiblilidad de agregar un numero siempre menor que el stock disponible de dicho producto a un carrito de compras (siempre y cuando el producto no exista aun en el carrito).
+
+- Haciendo click en el icono de carrito podemos acceder a un resumen de nuestra compra y realizar el pedido , el cual quedara registrado en la base de datos 
+
+<br/>
+
+ ![](./gif/2.0.gif)
+
+<br/>
 
 ## Comenzando 🚀
 
@@ -43,7 +53,7 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 ## Autores ✒️
 
 
-* **Leonardo Puchetta** -[LeonardoPuchetta](https://github.com/LeonardoPuchetta)
+* **Leonardo Puchetta** -[https://github.com/LeonardoPuchetta](https://github.com/LeonardoPuchetta)
 
 
 <!-- También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto.  -->
