@@ -1,6 +1,21 @@
 .item-count{
-    display:flex;
+    display: inline-flex;
     flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-color: var(--color-medium-2);
+    border-radius: 0.1rem;
+    border-style:none;
+    border-width: 0.05rem;
+    padding: 1rem;
+    color:black;  
+    font-family: Bodonitown,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.row-text-count{
+    margin:1rem 1rem 1.5rem 1rem;
+    font-weight:600;
+    
 }
 
 .row-btn-count{
@@ -13,6 +28,17 @@
 
 .btn-count{
     width: 3rem;
+    text-decoration: none ;
+    color:black ;
+    font-weight: 400;
+    border-radius: 0.2rem ;
+    border-color: var(--color-medium-2) ;
+    background-color: var(--color-medium-1);
+    border-width: 0.005rem; 
+}
+.btn-count:hover{
+    background-color:var(--color-dark-resalted);
+
 }
 
 .row-btn-add{
@@ -22,6 +48,8 @@
 }
 .btn-add{
     width: 12rem;
+    margin-top: 0.5rem;
+    border-radius: 0 !important;
 }
 
 

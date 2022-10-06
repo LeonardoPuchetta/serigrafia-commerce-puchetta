@@ -10,9 +10,7 @@ import CartWidget from '../CartWidget';
 
 import './NavBar.css'
 
-import logo from './../../assets/logo.svg'
-
-
+import logo from './../../assets/hojas.png';
 
 export default function NavBar(props) {
 
@@ -28,14 +26,14 @@ const isLoging = false ;
                 src={logo}
                 width="30"
                 height="30"
-                className="d-inline-block align-top"
-              />{' '}Vivero
+                className="d-inline-block align-top icon-image"
+              /><span className='name-commerce'>El Vivero</span>
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto" >
-          <NavDropdown title="Plantas" id="basic-nav-dropdown">
+          <NavDropdown title="Plantas" id="basic-nav-dropdown" className='dropdown-menu-navbar'>
               <Link to='/category/plantas-anuales' className='navbar-link'>Plantas anuales</Link><br/>
               <Link to='/category/plantas-perennes' className='navbar-link'>Plantas perennes</Link><br/>
               <Link to='/category/plantas-interior' className='navbar-link'>De interior</Link><br/>

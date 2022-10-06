@@ -1,26 +1,64 @@
 .item-detail-container{
-    display: flex;
+    display: flex; 
     flex-direction: row;
-    margin : 2rem
+    margin:0;
+    padding:2rem !important;
+    background-color: var(--color-light-1);
+    min-height: 100vh ;
 }
 .item-detail-image-container{
-    margin-right:1.5rem;
-    width: 50%;
+    margin-right:1rem;
     height: auto;
-    
-    
+    padding: 0.8rem;
+    text-align: center;
 }
 
 .item-detail-image{
-    width: 100%;
+    width: 20rem;
     height: auto;
+}
+
+.item-detail-info-title{
+    font-family: Bodonitown;
+    color:black;
+    font-size: 2rem;
+    font-weight: 650;  
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.item-detail-info-description{
+    font-family: 'PT Serif', 'Georgia';
+    margin-top: 1rem;
+    font-style: italic;
+   
 }
 
 .item-detail-info-price{
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     color: #387355;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
+}
+
+.item-detail-info-stock{
+    font-family: 'PT Serif', 'Georgia';
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.is-in-advice{ 
+    display: inline-block;
+    color:var(--color-light-1);
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    border-style:unset;
+    margin-top: 1rem;
+    background-color: var(--color-dark);
+    font-weight: 600;
+    font-family: Bodonitown,Arial, Helvetica, sans-serif;
+
 }
 
 .item-detail-info-count{
@@ -28,10 +66,44 @@
  
 }
 
+
+
 .btn-finish{
  margin-right:1rem;
  
 }
-.btn-continue{
 
+@media (min-width:992px) and (max-width:1199.98px){
+ 
 }
+@media (min-width:768px) and (max-width:991.98px){
+    .item-detail-container{
+        flex-direction: column;
+        padding-bottom: 1rem !important;
+    }
+   
+}
+@media (min-width:576px) and (max-width:767.98px){
+    .item-detail-container{
+        flex-direction: column;
+        padding-bottom: 1rem !important;
+
+    }
+    .item-detail-info-title{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (min-width:320px) and (max-width:575.98px){
+    .item-detail-container{
+        flex-direction: column;
+        padding-bottom: 1rem !important;
+
+    }
+    .item-detail-info-title{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+

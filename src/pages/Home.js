@@ -1,18 +1,14 @@
 import React from 'react';
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 
-// import {CartContext} from './../components/CartContext/CartContext'
-
 import NavBar from './../components/NavBar';
-import ItemListContainer from '../components/ItemListContainer';
-import ItemDetailContainer from '../components/ItemDetailContainer';
+import ItemListContainer from './../containers/ItemListContainer';
+import ItemDetailContainer from './../containers/ItemDetailContainer';
 import Cart from '../components/Cart';
 import Footer from './../components/Footer';
-
-
+import Error404 from '../components/Error404';
 
 export default function Home() {
-
 
   return (
     <BrowserRouter>
@@ -22,7 +18,7 @@ export default function Home() {
         <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
         <Route path='/category/:idCategory' element={<ItemListContainer/>}/>
         <Route path='/cart' element={<Cart/>}/>
-        <Route path='*' element={<p>Error 404</p>}/>
+        <Route path='*' element={<Error404/>}/>
       </Routes>  
       <Footer/> 
     </BrowserRouter>

@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
 import './ItemDetail.css';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
 import ItemCount from '../ItemCount';
+
+import AnimatedButton from '../AnimatedButton';
 
 import useCart from './../../hooks/useCart'
 
@@ -12,34 +13,44 @@ const {item}= props;
 //traemos el contexto mediante el hook
 const ctx = useCart();
 
+const {isInCart} = useCart() ; 
+
 
 const [itemCount,setItemCount] = useState(0);
 
 const onAdd = (quantityToAdd) => {
     setItemCount(quantityToAdd);
-    //usamos la funcion del contexto para agregar productos 
-    //al estado global cart
+    //usamos la funcion del contexto para agregar productos al estado global cart
     ctx.addItem(item,quantityToAdd);
-
 }
-
-
-
-
 
   return (
     <>
     { item.imageUrl ? 
     
-    <div className='item-detail-container '>
-
+    
+    <div className='item-detail-container container'>
         <div  className='item-detail-image-container'>
             <img src={item.imageUrl} alt={item.name} className='item-detail-image'/>
+           
         </div>
 
         <div  className='item-detail-info'>
             <div className='item-detail-info-title'>
-                <h1>{item.name}</h1>
+                <div>
+                <span>{item.name}</span>
+                </div>
+                <div>
+                    {isInCart(item.id)? 
+                    <Link to='/cart'>
+                        <AnimatedButton type={'info'} text={'Ver carrito'}/>
+                    </Link>
+                    :<></>}
+                    <Link to='/'>
+                        <AnimatedButton type={'success'} text={'Continuar comprando'}/>
+                    </Link>
+                    
+                </div>
             </div>
             <div className='item-detail-info-description'>
                 {item.description}
@@ -48,18 +59,23 @@ const onAdd = (quantityToAdd) => {
                 <strong>$ {item.price}</strong>
             </div>
             <div className='item-detail-info-stock'>
-                <h4>{item.stock} unidades en stock</h4>
+                <span>Actualmente contamos con <strong>{item.stock}</strong> unidades en stock</span>
+            </div>
+            <div>
+                { isInCart(item.id) ? <div className='is-in-advice'><span >Agregado  en el carrito !
+                </span></div> : <></>}
             </div>
             <div className='item-detail-info-count'>
-                { (itemCount === 0 ) ? <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/> 
-                : <Link to='/cart'><Button className='btn-finish' variant="outline-warning">Terminar compra</Button></Link>} 
-
-                <Link to='/'><Button className='btn-continue' variant="outline-info">Continuar comprando</Button></Link> 
+                
+                { (itemCount === 0 ) && (!isInCart(item.id)) ? <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/> 
+                : <></>} 
+                
             </div>
-      
+             
         </div>
-        
     </div> 
+    
+    
     : <><h1>Cargando ...</h1></>
     }
  </>

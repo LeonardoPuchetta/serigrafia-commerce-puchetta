@@ -10,7 +10,9 @@ export default function ModalComponent(props) {
                   <Modal.Header closeButton>
                       <Modal.Title>{title}</Modal.Title>
                   </Modal.Header>
-                  <Modal.Body>{bodyModal}</Modal.Body>
+                  <Modal.Body>
+                    {bodyModal}
+                  </Modal.Body>
                   <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseModal}>
                         Cerrar

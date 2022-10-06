@@ -11,19 +11,19 @@ const {product} = props
 const {getTotalPriceItem,removeItem} = useCart();
 
 const styleImage = {
-    'width': '8rem',
-    'height':'8rem'
+    'width': '7.5rem',
+    'height':'7.5rem'
   }
 
   return (
     <>
                         <div className='product-detail border'>
-                              <div className='product-detail-image' >
-                                <img src={product.item.imageUrl} style={styleImage}/>
+                              <div className='product-detail-image-container' >
+                                <img src={product.item.imageUrl} style={styleImage} alt='product' />
                               </div>
 
                               <div className='product-detail-name'>
-                                <h5>Producto : {product.item.name}</h5>
+                                <span>{product.item.name}</span>
                               </div>
                               
                               <div className='product-detail-count'>
@@ -32,7 +32,7 @@ const styleImage = {
                                     </div>
                                     
                                     <div  className='product-detail-total'>
-                                         {getTotalPriceItem(product.item,product.quantity)} $
+                                    <strong>Subtotal:  </strong> $ {getTotalPriceItem(product.item,product.quantity)}
                                     </div> 
                               </div>
                               <div className='product-detail-delete'>

@@ -1,0 +1,71 @@
+.btn-animated{
+    display: inline-block;
+    position: relative;
+    background: none;
+    border: none;
+    cursor:pointer;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin: 0 1rem 0 1rem;
+    /* background-color: black; */
+    /* color: white; */
+    font-size: 1rem;
+}
+
+.span-btn-animated{
+    display: block;
+}
+
+.btn-animated::before,
+.btn-animated::after{
+    content:'';
+    width: 0;
+    height: 2.5px;
+    position:absolute ;
+    transition: all 0.2s linear;
+    background: var(--color-medium-1);
+}
+
+
+
+.span-btn-animated::before,
+.span-btn-animated::after{
+    content:'';
+    width: 2.5px;
+    height: 0;
+    position:absolute ;
+    transition: all 0.2s linear;
+    background: var(--color-medium-1);
+}
+
+.btn-animated:hover::before,
+.btn-animated:hover::after{
+    width: 100%;
+}
+
+.btn-animated:hover .span-btn-animated::before,
+.btn-animated:hover .span-btn-animated::after{
+    height: 100%;
+}
+
+.btn-animated::after{
+    right: 0;
+    bottom: 0;
+    transition-duration: 0.4s;
+}
+.btn-animated .span-btn-animated::after{
+    right: 0;
+    bottom: 0;
+    transition-duration: 0.4s;
+}
+
+.btn-animated::before{
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+}
+.btn-animated .span-btn-animated::before{
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+} 
+

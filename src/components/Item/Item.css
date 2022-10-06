@@ -1,3 +1,27 @@
 .item{
     margin: 0.5rem;
+    font-family:Bodonitown,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+.item:hover{
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2) !important;
+}
+.card-img-top{
+    padding: 1rem 1rem 0rem 1rem !important;
+    
+}
+
+.card-body{
+    margin-top: 0rem !important;
+}
+
+.card-text{
+    color: var(--color-dark-resalted) !important
+}
+
+
+
+
+
+
+
+

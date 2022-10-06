@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import AnimatedButton from '../AnimatedButton';
 
 import { Link } from 'react-router-dom';
 
@@ -16,23 +16,21 @@ export default function Item(props) {
 
     }
 
-
-
   return (
     <>
     <div className='item'>
-    <Card style={{ width: '14rem' }}>
-      <Card.Img variant="top" src={item.imageUrl} style={imageStyle} />
-      <Card.Body>
-        <Card.Title>{item.name}</Card.Title>
-        <Card.Text>
-           $ {item.price}
-        </Card.Text>
-        <Link to={`/item/${item.id}`}>
-          <Button variant="primary">Ver detalle</Button>
-        </Link>
-      </Card.Body>
-    </Card>
+        <Card style={{ width: '14rem' }}>
+          <Card.Img variant="top" src={item.imageUrl} style={imageStyle} />
+          <Card.Body>
+            <Card.Title>{item.name}</Card.Title>
+            <Card.Text>
+             <strong> $ {item.price} </strong>
+            </Card.Text>
+            <Link to={`/item/${item.id}`}>
+              <AnimatedButton text={'Ver detalle'} type={'default'}/>
+            </Link>
+          </Card.Body>
+        </Card>
     </div>
         
     </>
