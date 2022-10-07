@@ -1,6 +1,4 @@
 import React , {useState, createContext} from 'react';
-import {Alert,Button} from 'react-bootstrap';
-
 
 export const CartContext = createContext();
 
