@@ -76,7 +76,11 @@ const onAdd = (quantityToAdd) => {
     </div> 
     
     
-    : <><h1>Cargando ...</h1></>
+    : <>
+    <div className='item-detail-container container'>
+    <h1>Cargando ...</h1>
+    </div>
+    </>
     }
  </>
   )
