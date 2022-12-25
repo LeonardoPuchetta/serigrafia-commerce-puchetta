@@ -17,22 +17,24 @@ export default function Item(props) {
     }
 
   return (
-    <>
-    <div className='item'>
-        <Card style={{ width: '14rem' }}>
-          <Card.Img variant="top" src={item.imageUrl} style={imageStyle} />
-          <Card.Body>
-            <Card.Title>{item.name}</Card.Title>
-            <Card.Text>
-             <strong> $ {item.price} </strong>
-            </Card.Text>
-            <Link to={`/item/${item.id}`}>
-              <AnimatedButton text={'Ver detalle'} type={'default'}/>
-            </Link>
-          </Card.Body>
-        </Card>
-    </div>
-        
-    </>
+        <Card style={{ width: '14rem' }} className='card-i'>
+              <Card.Img variant="top" src={item.imageUrl} style={imageStyle} />
+
+              <Card.Body>
+                    <Card.Title>{item.name}</Card.Title>
+                    {/* <Card.Text>
+                    <strong> $ {item.price} </strong>
+                    </Card.Text> */}
+              </Card.Body>
+
+              <Link to={`/item/${item.id}`} className='product-detail-link'>
+                  <AnimatedButton text={'Ver detalle'} type={'default'}/>
+                  {/* <button className='product-detail-link' >
+                        <span className='span-btn-animated'>
+                         Ver detalle
+                        </span>
+                  </button> */}
+              </Link>
+        </Card>  
   )
 }

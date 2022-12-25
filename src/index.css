@@ -12,15 +12,17 @@ body {
   font-size: 1em;
  
   /* paleta de colores */
-  --color-dark : #4d93a2 ; 
-  --color-medium-1: #4d9a83;
-  --color-medium-2: #9ecca4;
+  --color-dark : #023641 ; 
+  --color-medium-1: #276F77;
+  --color-medium-2: #558F96;
   --color-light-1: #d8d8b9;
-  --color-light-2 :#e0e4c4;
+  --color-light-2 :#e9ecec;
 
-  --color-dark-resalted:#417e8b;
+  /* #023641 • #276F77 • #558F96 • #001118 • #A3BEBE */
 
-  background-color: var(--color-medium-1) !important;
+  --color-dark-resalted:#001118;
+
+  background-color: var(--color-light-2) !important;
 
   /* media queries sizes */
    /* Responsive down size (variables para puntos de corte hacia abajo ) */
@@ -48,7 +50,7 @@ code {
     monospace;
 }
 
-@font-face {
+/* @font-face {
   font-family: Bodoni;
   src: url('./assets/fonts/BodoniXT.ttf');
 }
@@ -64,7 +66,7 @@ code {
   src: url('./assets//fonts/04B_03__.TTF');
   font-style: normal;
   font-weight:500;
-}
+} */
 
 
 /* @media (min-width:992px) and (max-width:1199.98px){

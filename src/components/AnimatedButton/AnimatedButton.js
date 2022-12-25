@@ -38,7 +38,10 @@ export default function AnimatedButton(props) {
     }
     
     useEffect(()=>{
-        setStyleButton(stylesObject[type])
+        setStyleButton(stylesObject[type]);
+        // let button = document.getElementsByClassName('btn-animated');
+        // button.style.setProperty('--bg-pseudo' , 'hsl(100, 90%, 60%)' )
+
  
     },[type])
   

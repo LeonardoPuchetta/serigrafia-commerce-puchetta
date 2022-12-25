@@ -1,6 +1,9 @@
 .item-list-container{
-   background-color:var(--color-medium-2);
+   background-color:var(--color-light-2);
    min-height: 100vh;
    padding-bottom: 4rem;
    text-align: center;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
 }
