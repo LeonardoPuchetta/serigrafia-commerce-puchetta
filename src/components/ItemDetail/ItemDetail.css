@@ -1,109 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 .item-detail-container{
     display: flex; 
     flex-direction: row;
     margin:0;
-    padding:2rem !important;
+    padding: 2rem;
     background-color: var(--color-light-1);
     min-height: 100vh ;
 }
-.item-detail-image-container{
-    margin-right:1rem;
-    height: auto;
-    padding: 0.8rem;
-    text-align: center;
-}
-
 .item-detail-image{
-    width: 20rem;
+    margin-right: 1.5rem;
     height: auto;
+    text-align: center;
+    border-radius: 0.6rem;
+    width: 25rem;
+}
+.item-detail-info{
+
 }
 
-.item-detail-info-title{
-    font-family: Bodonitown;
+.item-detail-info-header{
     color:black;
-    font-size: 2rem;
-    font-weight: 650;  
+    font-size: 1.6rem;
+    font-weight: 400;  
     display: flex;
     justify-content: space-between;
-
+    font-family: 'Lobster', cursive;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+.button-action{
+    font-family: 'PT Serif', 'Georgia';
+    margin-left: 1rem;
 }
 
 .item-detail-info-description{
     font-family: 'PT Serif', 'Georgia';
     margin-top: 1rem;
+    margin-bottom: 1rem;
     font-style: italic;
    
 }
 
 .item-detail-info-price{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
     color: #387355;
     font-size: 2.0rem;
 }
 
+
+
 .item-detail-info-stock{
-    font-family: 'PT Serif', 'Georgia';
+    font-family: 'Lobster', cursive;
     font-size: 1.2rem;
-    margin-top: 1rem;
+    
+   
 }
 
+
+
+.item-detail-sale{
+
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+      
+
+    
+}
 .is-in-advice{ 
-    display: inline-block;
+    
     color:var(--color-light-1);
     padding: 0.8rem;
     border-radius: 0.3rem;
-    border-style:unset;
+    margin: 0;
+    background-color: var(--color-medium-2);
+    font-size: 0.8rem;
+    font-family: 'PT Serif', 'Georgia';
+    width: fit-content;
     margin-top: 1rem;
-    background-color: var(--color-dark);
-    font-weight: 600;
-    font-family: Bodonitown,Arial, Helvetica, sans-serif;
 
 }
-
 .item-detail-info-count{
-  margin-top: 3rem;
- 
-}
+    margin-top: 1rem;
+  }
 
-
-
-.btn-finish{
- margin-right:1rem;
- 
-}
 
 @media (min-width:992px) and (max-width:1199.98px){
- 
+
+
 }
 @media (min-width:768px) and (max-width:991.98px){
     .item-detail-container{
         flex-direction: column;
         padding-bottom: 1rem !important;
     }
-   
+    .item-detail-image{
+        align-self: center;
+        width: 23rem;
+    }
+    .item-detail-info-header{
+       
+        margin-top:1.5rem;
+    }
+  
+
 }
 @media (min-width:576px) and (max-width:767.98px){
     .item-detail-container{
         flex-direction: column;
         padding-bottom: 1rem !important;
-
     }
-    .item-detail-info-title{
-        display: flex;
-        flex-direction: column;
+    .item-detail-image{
+        align-self: center;
+        width: 23rem;
+    }
+    .item-detail-info-header{
+       
+        margin-top:1.5rem;
     }
 }
 @media (min-width:320px) and (max-width:575.98px){
     .item-detail-container{
         flex-direction: column;
-        padding-bottom: 1rem !important;
-
+        padding: 1rem ;
     }
-    .item-detail-info-title{
-        display: flex;
-        flex-direction: column;
+    .item-detail-image{
+        align-self: center;
+        width: 20rem;
     }
+ .item-detail-info-header{
+        /* flex-direction: column; */
+        margin-top:1rem;
+    } 
+    .button-action{
+        font-family: 'PT Serif', 'Georgia';
+        margin-left: 1rem;
+        font-size: 0.8rem;
+    }
+   
 }
-
 

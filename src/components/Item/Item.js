@@ -29,11 +29,6 @@ export default function Item(props) {
 
               <Link to={`/item/${item.id}`} className='product-detail-link'>
                   <AnimatedButton text={'Ver detalle'} type={'default'}/>
-                  {/* <button className='product-detail-link' >
-                        <span className='span-btn-animated'>
-                         Ver detalle
-                        </span>
-                  </button> */}
               </Link>
         </Card>  
   )

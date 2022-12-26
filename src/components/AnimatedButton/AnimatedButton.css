@@ -4,17 +4,15 @@
     border: none;
     cursor:pointer;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    margin: 0 1rem 0 1rem;
     font-size: 0.9rem;
-    --bg-pseudo: red;
-
-
+    border-radius: 0.3rem;
 }
-
 .span-btn-animated{
     display: block;
 
 }
+
+
 
 .btn-animated::before,
 .btn-animated::after{
@@ -23,7 +21,7 @@
     height: 2.5px;
     position:absolute ;
     transition: all 0.2s linear;
-    background: var(--bg-pseudo);
+    background: var(--color-medium-1);
 }
 
 

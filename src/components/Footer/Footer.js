@@ -19,7 +19,6 @@ export default function Footer() {
 
   return (
     <div className='footer-container'>
-      
       <div className='footer-superior'>
           <div className='line-container'><div className='line'></div></div>
           <IconContext.Provider value={iconCenterStyle}>

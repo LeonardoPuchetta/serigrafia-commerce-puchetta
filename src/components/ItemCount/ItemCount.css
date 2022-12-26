@@ -3,27 +3,29 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
-    background-color: var(--color-medium-2);
-    border-radius: 0.1rem;
+    background-color: var(--color-light-2);
+  
+    border-radius: 0.4rem;
     border-style:none;
     border-width: 0.05rem;
-    padding: 1rem;
-    color:black;  
-    font-family: Bodonitown,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0.5rem;
+    color: var(--color-dark);  
 }
 
-.row-text-count{
-    margin:1rem 1rem 1.5rem 1rem;
-    font-weight:600;
+/* .row-text-count{
+    margin:0.5rem ;
+    font-weight:500;
+    width: 10rem;
     
-}
+} */
 
 .row-btn-count{
     display: flex;
     flex-direction: row;
-    width: 12rem;
+    width: 10rem;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .btn-count{
@@ -37,19 +39,23 @@
     border-width: 0.005rem; 
 }
 .btn-count:hover{
-    background-color:var(--color-dark-resalted);
+    background-color:var(--color-medium-2);
 
 }
 
 .row-btn-add{
     display: flex;
-    width: 12rem;
-    margin: 1rem 0rem 1rem 0;
+    width: 10rem;
+    margin: 0.8rem 1rem 0.5rem 1rem;
+   
+
 }
 .btn-add{
-    width: 12rem;
+    width: 10rem;
     margin-top: 0.5rem;
-    border-radius: 0 !important;
+    border-radius: 0.3rem !important;
+    /* padding: 0.5rem 1rem 0.5rem 1rem !important; */
+
 }
 
 

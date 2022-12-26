@@ -10,11 +10,14 @@ const [dato,setDato] = useState({});
 const {idItem} = useParams();
 
   useEffect(()=>{
-    getItemDetailFetch(idItem).then(result =>{
-      setDato(result)
-    }).catch(error => {
-      console.log(error)
-    })
+     
+      getItemDetailFetch(idItem).then(result =>{
+        setDato(result)
+      }).catch(error => {
+        console.log(error)
+      }) 
+    
+ 
 
   },[idItem])
 

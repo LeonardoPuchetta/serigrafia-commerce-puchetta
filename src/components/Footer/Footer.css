@@ -16,7 +16,8 @@
 .footer-superior{
     display: flex;
     justify-content: center;
-    border-bottom: 0.1rem solid  var(--color-dark-resalted); 
+    border-bottom: 0.1rem solid  var(--color-light-1); 
+    border-top: 0.1rem solid var(--color-light-1);
     
 }
 .line-container{
@@ -24,11 +25,13 @@
     align-items: center;
 }
 .line{
-    border-top: 0.1rem solid black; 
+    border-top: 0.1rem solid var(--color-light-1);
     height: 2px;
     width: 20rem;
     padding: 0;
     margin: 1rem;
+    
+    
     
 }
 .social-list-ul{

@@ -16,12 +16,13 @@ export default function AnimatedButton(props) {
             backgroundColor:'#2AE66E'
         },
         'delete':{
-            color : 'red',
-            backgroundColor:'white'
+            color : 'white',
+            backgroundColor:'red'
         },
         'default':{
             color : 'white',
-            backgroundColor:'black'
+            backgroundColor:'black',
+            
         },
         'info':{
             color : 'white',
@@ -39,10 +40,7 @@ export default function AnimatedButton(props) {
     
     useEffect(()=>{
         setStyleButton(stylesObject[type]);
-        // let button = document.getElementsByClassName('btn-animated');
-        // button.style.setProperty('--bg-pseudo' , 'hsl(100, 90%, 60%)' )
-
- 
+      
     },[type])
   
   return (
