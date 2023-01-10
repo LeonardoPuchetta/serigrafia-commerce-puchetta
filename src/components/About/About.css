@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+.about-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+.about-image-container{
+    width: 40%;
+    margin-right: 2rem;
+    margin-left:2rem;
+   
+
+}
+.about-image-container img{
+    object-fit: contain;
+    width: 100%; /* la imagen ocupa todo el ancho */
+    height: auto; /* mantenemos la proporcion */
+}
+
+.about-text-container{
+    width: 60%;
+    margin-right: 2rem
+}
+
+.about-text-container h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Pacifico', cursive;
+}
+
+.about-text-container p{
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+@media (min-width:992px) and (max-width:1199.98px){
+
+
+}
+@media (min-width:768px) and (max-width:991.98px){
+
+
+}
+
+@media (min-width:576px) and (max-width:767.98px){
+    .about-image-container{
+        display: none;
+    }
+    .about-text-container{
+        
+        width: 100%;
+        margin-left: 2rem;
+        /* background-image: url('https://sites.google.com/site/peras012333/_/rsrc/1478735460959/home/vivero-el-saman/IMG_20161020_145445.jpg');
+        background-size: cover; */
+        
+        
+    }
+ 
+}
+
+@media (min-width:320px) and (max-width:575.98px){
+    .about-image-container{
+        display: none;
+    }
+    .about-text-container{
+        
+        width: 100%;
+        margin-left: 2rem;
+        /* background-image: url('https://sites.google.com/site/peras012333/_/rsrc/1478735460959/home/vivero-el-saman/IMG_20161020_145445.jpg');
+        background-size: cover; */
+        
+        
+    }
+}

@@ -1,19 +1,16 @@
 import React from 'react';
-
 import './Footer.css';
 
 
-import {IoLogoLinkedin} from 'react-icons/io';
+import { IconContext } from "react-icons";
 import { IoLogoWhatsapp } from 'react-icons/io';
-import { IoLogoInstagram } from 'react-icons/io';
-import { IoLogoFacebook } from 'react-icons/io';
-import { IoLogoYoutube } from 'react-icons/io';
 import { IoMdMail } from 'react-icons/io';
 import {SiGooglemaps} from 'react-icons/si';
-import { IconContext } from "react-icons";
 
-import { iconCenterStyle , iconListStyle } from '../../utils/iconStyles';
-
+import instagramIcon from './../../assets/icons/instagram.svg';
+import facebookIcon from './../../assets/icons/facebook.svg';
+import youtubeIcon from './../../assets/icons/youtube.svg';
+import linkedinIcon from './../../assets/icons/linkedin.svg'
 
 export default function Footer() {
 
@@ -21,31 +18,36 @@ export default function Footer() {
     <div className='footer-container'>
       <div className='footer-superior'>
           <div className='line-container'><div className='line'></div></div>
-          <IconContext.Provider value={iconCenterStyle}>
+          {/* <IconContext.Provider value={iconCenterStyle}> */}
                   <ul className='social-list-ul'>
                      
                       <li className='social-list-li'>
                         <a href='https://www.linkedin.com/in/leonardo-puchetta' target='_blank'  rel='noreferrer'>
-                          <span><IoLogoLinkedin/></span>
+                          {/* <span><IoLogoLinkedin/></span> */}
+                          <img src={linkedinIcon} className='social-icon'/>
                         </a>
                       </li>
                       <li className='social-list-li'>
                         <a href='https://www.instagram.com/' target='_blank'  rel='noreferrer'>
-                          <span><IoLogoInstagram/></span>
+                          <img src={instagramIcon} className='social-icon'/>
+                          {/* <span><IoLogoInstagram/></span> */}
                         </a>
                       </li>
                       <li className='social-list-li'>
                         <a  href='https://www.facebook.com/' target='_blank'  rel='noreferrer'>
-                          <span><IoLogoFacebook/></span>
+                          <img src={facebookIcon} className='social-icon'/>
+                          {/* <span><IoLogoFacebook/></span> */}
                         </a>
                       </li>
                       <li className='social-list-li'>
                         <a href='https://www.youtube.com/' target='_blank'  rel='noreferrer'>
-                          <span><IoLogoYoutube/></span>
+                          {/* <span><IoLogoYoutube/></span> */}
+                          <img src={youtubeIcon} className='social-icon'/>
+
                         </a>
                       </li>
                   </ul>
-          </IconContext.Provider>
+          {/* </IconContext.Provider> */}
           <div className='line-container'><div className='line'></div></div>
           
       </div>
@@ -62,7 +64,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className='footer-inferior-center'>
-            <IconContext.Provider value={iconListStyle}>
+            <IconContext.Provider value={'width:1.2rem'}>
                 <ul className='contact-list-ul'>
                   <li className='contact-list-li'>
                     <a href='https://www.google.com.uy/maps/place/Cam.+Gral.+Servando+G%C3%B3mez+2444,+12100+Montevideo,+Departamento+de+Montevideo/@-34.860815,-56.0648027,17z/data=!3m1!4b1!4m5!3m4!1s0x959f87ac17e1649d:0x908c2dbb7dc6ebdc!8m2!3d-34.8608194!4d-56.062614?hl=es-419'

@@ -2,13 +2,16 @@ import React from "react";
 import Home from "./pages/Home";
 
 import CartProvider from "./providers/CartProvider";
+import AuthProvider from "./providers/AuthProvider";
 
 
 const App = () => {
   return (
-    <CartProvider >
-      <Home/>
-    </CartProvider>
+    <AuthProvider>
+      <CartProvider >
+        <Home/>
+      </CartProvider>
+    </AuthProvider>
   )
 }
 

@@ -50,35 +50,35 @@ code {
     monospace;
 }
 
-/* @font-face {
-  font-family: Bodoni;
-  src: url('./assets/fonts/BodoniXT.ttf');
-}
-@font-face {
-  font-family: Bodonitown;
-  src: url('./assets/fonts/Bodonitown.ttf');
-  font-style: normal;
-  font-weight:500;
-}
 
-@font-face {
-  font-family: Numeros;
-  src: url('./assets//fonts/04B_03__.TTF');
-  font-style: normal;
-  font-weight:500;
+
+/* @media (--media-breackpoint-up-lg) and (--media-breackpoint-down-xl){
+ 
+}
+@media (--media-breackpoint-up-md) and (--media-breackpoint-down-lg){
+  
+   
+}
+@media (--media-breackpoint-up-sm) and (--media-breackpoint-down-md){
+ 
+}
+@media (--media-breackpoint-up-xs) and (--media-breackpoint-down-sm){
+ 
 } */
 
 
 /* @media (min-width:992px) and (max-width:1199.98px){
- 
+
+
 }
 @media (min-width:768px) and (max-width:991.98px){
-  
-   
+
+
 }
+
 @media (min-width:576px) and (max-width:767.98px){
- 
 }
+
 @media (min-width:320px) and (max-width:575.98px){
- 
+    
 } */

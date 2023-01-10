@@ -1,12 +1,24 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import useAuth from '../../hooks/useAuth';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
 import CartWidget from '../CartWidget';
+
+import IconButton from './../IconButton/IconButton';
+import {RiLoginBoxFill} from 'react-icons/ri';
+import {RiLogoutBoxFill} from 'react-icons/ri';
+import {FaUserEdit} from 'react-icons/fa';
+
+
+import ModalComponent from '../ModalComponent';
+import Login from '../Login';
+import Register from '../Register';
+
 
 import './NavBar.css'
 
@@ -14,7 +26,29 @@ import logo from './../../assets/hojas.png';
 
 export default function NavBar(props) {
 
-const isLoging = false ; 
+const {user,logoutUser} = useAuth();
+
+const navigate = useNavigate();
+
+const [isVisibleModalLogin,setIsVisibleModalLogin] = useState(false);
+const [isVisibleModalRegister,setIsVisibleModalRegister] = useState(false);
+
+const handleCloseModalLogin = () =>{
+  setIsVisibleModalLogin(false)
+}
+const handleCloseModalRegister = () =>{
+  setIsVisibleModalRegister(false)
+}
+
+const logout = () =>{
+
+  logoutUser();
+  //redireccionamiento a la home page 
+  navigate('/')
+}
+console.log(user);
+
+
 
   return (
 <Navbar  expand="lg" className='header-navbar'>
@@ -42,24 +76,42 @@ const isLoging = false ;
           <Link to='/category/arbustos' className='navbar-link'>Arbustos</Link>
           <Link to='/category/arboles' className='navbar-link'>Arboles</Link>
           <Link to='/category/huerta-organica'className='navbar-link'>Huerta organica</Link>
-          <Link to='/about'className='navbar-link'>Quienes Somos</Link>
+          <Link to='/about'className='navbar-link'>Nosotros</Link>
         </Nav>
         
-        { !isLoging ? <>
+        { !user ? 
+          <>
+            <ModalComponent title={'Registro de usuario'} bodyModal={<Register handleCloseModalRegister={handleCloseModalRegister}/>} isVisibleModal={isVisibleModalRegister}
+            handleCloseModal={handleCloseModalRegister}/>
+              <IconButton icon={<FaUserEdit/>} onClick={()=> setIsVisibleModalRegister(true)} 
+                tooltipOn = {true} tooltip={'registro'}/>
+
+
+            <ModalComponent title={'Login de usuario'} bodyModal={<Login handleCloseModalLogin={handleCloseModalLogin}/>} 
+            isVisibleModal={isVisibleModalLogin} handleCloseModal={handleCloseModalLogin}/>
+              <IconButton icon={<RiLoginBoxFill/>} onClick={()=> setIsVisibleModalLogin(true)} 
+              tooltipOn = {true} tooltip={'login'}/>
+              
+          </> :
+          <>
+            <Nav pullright="true">
+              <IconButton icon={<RiLogoutBoxFill/>} onClick={logout} tooltipOn = {true} tooltip={'logout'}/>
+            </Nav>
+          </> }
+
+        {user? <>
         <Nav pullright="true">
-          <Link to='/register' className='navbar-link'>Registro</Link>
-        </Nav>
-        <Nav pullright="true">
-          <Link to='/login' className='navbar-link'>Login</Link>
-        </Nav> </> : <></> }
-        <Nav pullright="true">
-          <Link to='/cart' className='navbar-link'>
+          <Link to='/cart' >
             <CartWidget/>
           </Link>
-        </Nav>
+        </Nav> </> :
+        <></>
+        }
+        
         
       </Navbar.Collapse>
     </Container>
+
 </Navbar>
     )
 }

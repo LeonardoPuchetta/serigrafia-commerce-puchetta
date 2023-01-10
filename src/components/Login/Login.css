@@ -1,0 +1,12 @@
+#span-login-advice{
+    display: none;
+    color: red;
+    margin: 1rem 0 1rem 0 ;
+}
+
+
+.btn-submit-login{
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+
+}

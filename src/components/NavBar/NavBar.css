@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
 
 
 .header-navbar{
@@ -42,8 +43,9 @@
     text-decoration: none;
     color:#000;
     margin: 0.6rem 1rem 0.4rem 0.6rem ;
-    font-family: 'Pacifico', cursive;
+    /* font-family: 'Pacifico', cursive; */
     font-size: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
 }
 
 
@@ -59,20 +61,31 @@
     border-top: 0ch !important;
     font-size: 1.1rem !important;
     
-
 }
 .dropdown-menu-navbar {
     background-color: var(--color-light-2) !important;
     border-top: 0ch !important;
     margin-left: 0.65rem;
-    font-family: 'Pacifico', cursive;
+    /* font-family: 'Pacifico', cursive; */
     font-size: 1.1rem !important;
+    font-family: 'Quicksand', sans-serif;
 
     
 
 }
+.logout-btn{
+    background-color: transparent;
+    border-style: none;
+    
 
-
+}
+.icon-btn{
+   border-style: none;
+  
+}
+.icon-btn-image:hover{
+    background-color:#9ecca4;
+}
 
 @media(min-width:320px) and (max-width:991.98px){
 

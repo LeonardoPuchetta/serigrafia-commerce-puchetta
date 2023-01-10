@@ -1,12 +1,11 @@
 import React ,{useState}from 'react';
 import useCart from '../../hooks/useCart';
-
+import useAuth from './../../hooks/useAuth';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import {BsBagXFill} from 'react-icons/bs';
 import { createOrderFetch } from '../../utils/firebaseFetch';
-import { IconContext } from "react-icons";
-import { iconEmptyStyle } from '../../utils/iconStyles';
+
 
 import CartItem from '../CartItem';
 import ModalComponent from '../ModalComponent';
@@ -16,6 +15,8 @@ import './Cart.css';
 
 export default function Cart() {
 
+
+const {user} = useAuth();
 const [isVisibleModal,setIsVisibleModal] = useState(false);
 const [order,setOrder] = useState();
 
@@ -35,7 +36,7 @@ const createOrder = async () =>{
     let itemList = getItemList();
     let totalPrice = getTotalPrice();
 
-    await createOrderFetch(itemList,totalPrice).then(result =>{
+    await createOrderFetch(itemList,totalPrice,user).then(result =>{
       console.table(result);
       setOrder(result);
     }).catch(error =>{
@@ -85,7 +86,6 @@ const createOrder = async () =>{
     </div> 
     : <>
       <div className='container container-cart container-empty-cart'>
-      <IconContext.Provider value={iconEmptyStyle}>
         <div className='container-empty-cart'>
 
           <div><h5>El carrito esta vacio</h5> </div>
@@ -93,7 +93,6 @@ const createOrder = async () =>{
           <div><Link to='/'><Button variant="success" >Continuar comprando</Button></Link></div>
           
         </div> 
-      </IconContext.Provider> 
       </div>
       </>}
     </>

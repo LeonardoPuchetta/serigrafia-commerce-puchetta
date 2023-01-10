@@ -6,13 +6,15 @@
     margin-left: 0.5rem;
     margin-bottom: 0.25rem;
     color:black;
+    font-size: 1.4rem;
 }
 
 .cart-icon:hover{
-    color:#9ecca4;
+    color :var(--color-medium-2)
 }
 
 .span-cart{
+    display: none;
     position:absolute;
     left: 88%;
     bottom:40%;

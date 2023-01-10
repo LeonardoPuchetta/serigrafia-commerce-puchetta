@@ -5,13 +5,10 @@ import { collection, getDocs,getDoc ,query, where ,doc,
 
 // peticion de detalle de items 
 export const getItemDetailFetch = async (idItem) => {
-
     //constante para query
     const docRef = doc(db, "products", idItem);
-
     let dataFromFirestore;
-
-   await getDoc(docRef).then(result =>{
+    await getDoc(docRef).then(result =>{
       
         dataFromFirestore = {
           id:result.id,
@@ -25,6 +22,8 @@ export const getItemDetailFetch = async (idItem) => {
       return dataFromFirestore
     
 }
+
+
 // peticion de lista de items 
 export const getItemListFetch = async (idCategory) =>{
 
@@ -49,15 +48,12 @@ export const getItemListFetch = async (idCategory) =>{
     return dataFromFirestore
 }
 
+
 //creacion de orden de compra
-export const createOrderFetch = async (itemList,totalPrice) => {
+export const createOrderFetch = async (itemList,totalPrice,user) => {
 
   let order = {
-    buyer: {
-      name: "Leonardo Puchetta",
-      email:"leonardopuchetta21@gmail.com",
-      phone: "091359563"
-    },
+    buyer: user,
     date : serverTimestamp(),
     items: itemList,
     total: totalPrice,
@@ -81,3 +77,4 @@ export const createOrderFetch = async (itemList,totalPrice) => {
 
 
 }
+

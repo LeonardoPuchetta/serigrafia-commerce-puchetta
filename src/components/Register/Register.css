@@ -1,0 +1,22 @@
+.form-input{
+    margin: 0.3rem 0 0.5rem 0;
+    
+}
+
+
+#span-password-advice{
+    display: none;
+    color: red;
+    margin: 1rem 0 1rem 0 ;
+}
+#span-register-advice{
+    display: none;
+    color: red;
+    margin: 1rem 0 1rem 0 ;
+}
+
+.btn-submit-register{
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+
+}
