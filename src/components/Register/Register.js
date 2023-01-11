@@ -20,42 +20,35 @@ const register = (e) => {
     const correo = e.target.emailField.value;
     const password = e.target.passwordField.value;
     const repeatPassword =  e.target.passwordRepeatField.value;
+    const phone = e.target.phoneField.value;
+    const name = e.target.nameField.value;
 
     if(password == repeatPassword){
-
-      registerUser(correo,password);
+      registerUser(correo,password,name,phone);
       //redireccionamiento a la home page
-      if(!errorRegisterMessage){
-        
+      if(!errorRegisterMessage){ 
       handleCloseModalRegister();
       navigate('/');
-
       }
 
     } else {
-
         const inputPassword = document.getElementById('passwordField');
         const inputRepeatPassword = document.getElementById('passwordRepeatField');
         inputPassword.style.borderColor = "red";
         inputRepeatPassword.style.borderColor = "red";
         const spanAdvice = document.getElementById('span-password-advice');
         spanAdvice.style.display = 'contents'
-
     }
-
     if(errorRegisterMessage){
       const spanAdvice = document.getElementById('span-register-advice');
       spanAdvice.style.display = 'contents'
     }
-
-    
-
 }
 
   return (
 
 <form onSubmit={register} >
-<div class="row">
+<div className="row">
   <div className="form-outline col-12">
     <label className="form-label" htmlFor="nameField">Nombre completo</label>
     <input type="text" pattern="[A-Za-z]*" title="Por favor ingrese solo letras" 

@@ -1,6 +1,6 @@
 import React , {useState, createContext} from 'react';
 
-import {firebaseSignIn,firebaseIsUser,firebaseSignUp,firebaseClose } from '../utils/firebaseAuth';
+import {firebaseSignIn,firebaseIsUser,firebaseSignUp,firebaseClose,createUserFetch } from '../utils/firebaseAuth';
 
 export const AuthContext = createContext();
 
@@ -9,31 +9,21 @@ export default function AuthProvider(props){
     const {children} = props ; 
 
     const [user,setUser] = useState(null);
+
     const [errorRegisterMessage,setErrorRegisterMessage] = useState(null);
     const [errorLoginMessage,setErrorLoginMessage] = useState(null);
 
      //signUp/register
-     const registerUser = (email,password) => {
+     const registerUser = (email,password,name,phone) => {
 
-        firebaseSignUp(email,password).then(data =>{
-
+        firebaseSignUp(email,password,name,phone).then(data =>{
         if (data['user']){
-                
-                const userObject = {
-                    'email': data['user'].email,
-                    'id': data['user'].uid
-                }
-                setUser(userObject)
-        
+          setUser(data['user'])
         } else {
-            if (data['firebaseError']){
-                setErrorRegisterMessage(data['firebaseError'])
-            }
-        }
-         
+            if (data['firebaseError']){setErrorRegisterMessage(data['firebaseError'])}
+                }
         })
-        
-     }
+        }
 
     //signIn/login
     const loginUser = (email,password)=>{
@@ -41,11 +31,11 @@ export default function AuthProvider(props){
         firebaseSignIn(email,password).then(data =>{
             if (data['user']){
 
-                const userObject = {
-                    'email': data['user'].email,
-                    'id': data['user'].uid
-                }
-                setUser(userObject)
+                // const userObject = {
+                //     'email': data['user'].email,
+                //     'id': data['user'].uid
+                // }
+                setUser(data['user'])
         } else {
             if (data['firebaseError']){
                 setErrorLoginMessage(user['firebaseError'])
@@ -60,10 +50,8 @@ export default function AuthProvider(props){
 
     //cierre de sesion 
     const logoutUser = () => {
-
         firebaseClose();
         setUser(null);
-        
     }
  
 

@@ -90,7 +90,7 @@ const createOrder = async () =>{
 
           <div><h5>El carrito esta vacio</h5> </div>
           <div className='icon-empty-div'><span><BsBagXFill/></span></div>
-          <div><Link to='/'><Button variant="success" >Continuar comprando</Button></Link></div>
+          <div><Link to='/'><Button variant="success" >Ir a la tienda</Button></Link></div>
           
         </div> 
       </div>

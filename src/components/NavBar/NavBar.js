@@ -46,7 +46,7 @@ const logout = () =>{
   //redireccionamiento a la home page 
   navigate('/')
 }
-console.log(user);
+
 
 
 

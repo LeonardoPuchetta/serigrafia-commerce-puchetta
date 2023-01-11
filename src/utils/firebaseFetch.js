@@ -3,6 +3,31 @@ import { collection, getDocs,getDoc ,query, where ,doc,
   serverTimestamp,increment,setDoc,updateDoc} from "firebase/firestore";
 
 
+
+// creacion de user en la base 
+export const createUserFetch = async (user) => {
+  const newUserRef = doc(collection(db, "users"));
+  await setDoc(newUserRef, user);
+  return user 
+}
+
+//recuperacion de user mediante uid de Authentication 
+export const getUserFetch = async (uid) => {
+    let user ;
+    let queryConfig = query(collection(db,'users'),where('uid','==',uid))
+
+    await getDocs(queryConfig).then(result =>{
+
+    user = result.docs.map( item => ({
+      ...item.data()
+        }))[0]
+
+    }).catch(error =>{console.log(error)})
+
+    return user
+
+}
+
 // peticion de detalle de items 
 export const getItemDetailFetch = async (idItem) => {
     //constante para query
@@ -77,4 +102,3 @@ export const createOrderFetch = async (itemList,totalPrice,user) => {
 
 
 }
-

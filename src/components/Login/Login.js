@@ -44,8 +44,6 @@ const login = (e) => {
 
       }
    
-
-
     }
 
 
@@ -55,7 +53,8 @@ const login = (e) => {
   {/* <!-- Email input --> */}
   <div className="form-outline col-md-12">
     <label className="form-label" htmlFor="emailField">Correo electronico</label>
-    <input type="email" id="emailField" className="form-control form-input" required/> 
+    <input type="email" id="emailField" className="form-control form-input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+    title='Ingrese un correo valido ejemplo@gmail.com' required/> 
   </div>
 
   {/* <!-- Password input --> */}

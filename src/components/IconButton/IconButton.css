@@ -15,7 +15,8 @@
 .span-tooltip {
     display: none;
     position: absolute;
-    font-family: monospace;
+    
+    font-family: inherit;
     top:120%;
     height: 1.2rem;
     font-size: 0.7rem;

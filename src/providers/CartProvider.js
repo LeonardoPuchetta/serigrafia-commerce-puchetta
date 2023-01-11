@@ -1,16 +1,10 @@
 import React , {useState, createContext} from 'react';
-
-// import useAuth from '../hooks/useAuth';
-
 export const CartContext = createContext();
-
 
 export default function CartProvider(props){
 
     const {children} = props ; 
 
-    // const {user} = useAuth();
- 
     //nuestro carrito sera un array de object , cada object representa un producto
     const [cart, setCart] = useState([]);
 
@@ -100,9 +94,6 @@ export default function CartProvider(props){
 
         return itemList
     }
-
-
-
 
 
     return <CartContext.Provider 

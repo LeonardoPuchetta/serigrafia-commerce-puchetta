@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount';
 import Loading from '../Loading/Loading';
 import AnimatedButton from '../AnimatedButton';
-import useCart from './../../hooks/useCart'
+import useCart from './../../hooks/useCart';
+import useAuth from '../../hooks/useAuth';
 
 export default function ItemDetail(props) {
 
 const {item}= props;
 //traemos el contexto mediante el hook
 const ctx = useCart();
+const {user} = useAuth();
 
-const {isInCart,removeItem} = useCart() ; 
+const {isInCart} = useCart() ; 
 
 const [itemCount,setItemCount] = useState(0);
 
@@ -65,7 +67,7 @@ const onAdd = (quantityToAdd) => {
                     <span>Actualmente contamos con <strong>{item.stock}</strong> unidades en stock</span>
                 </div>
                 <div className='item-detail-info-count'>
-                    { (itemCount === 0 ) && (!isInCart(item.id)) ? <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/> 
+                    { (itemCount === 0 ) && (!isInCart(item.id)) && (user) ? <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/> 
                     : <></>} 
                 </div>
             </div>
@@ -75,12 +77,7 @@ const onAdd = (quantityToAdd) => {
             </div>
         </div>
     </div> 
-    {/* : <>
-    <div className='item-detail-container container'>
-            <Loading/>
-    </div>
-    </>
-    } */}
+
  </>
   )
 }
