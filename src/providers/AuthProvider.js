@@ -7,7 +7,6 @@ export const AuthContext = createContext();
 export default function AuthProvider(props){
 
     const {children} = props ; 
-
     const [user,setUser] = useState(null);
 
     const [errorRegisterMessage,setErrorRegisterMessage] = useState(null);
@@ -43,10 +42,6 @@ export default function AuthProvider(props){
         }
         })
     }
-
-    // const isUser = () =>{
-    //     setUser(firebaseIsUser())
-    // }
 
     //cierre de sesion 
     const logoutUser = () => {

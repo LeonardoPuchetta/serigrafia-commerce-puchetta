@@ -10,18 +10,22 @@
     
 }
 
-.product-detail-image-container{
+.product-detail-image{
     padding: 0.5rem;
+    align-items:center;
 }
 .product-detail-name{
     margin:1rem 1rem 0 1rem;
     font-weight: bold;
+    align-items:center;
+   
 }
 
 .product-detail-count{
     display: flex;
     flex-direction: column;
     margin :0.5rem;
+    align-items:center;
     
 
 }

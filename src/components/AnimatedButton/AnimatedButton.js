@@ -13,7 +13,8 @@ export default function AnimatedButton(props) {
         
         'success' : {
             color : 'white',
-            backgroundColor:'#2AE66E'
+            backgroundColor:'#2AE66E',
+            
         },
         'delete':{
             color : 'white',
@@ -31,10 +32,14 @@ export default function AnimatedButton(props) {
         'add-count':{
             color : 'white',
             backgroundColor:'black',
-            width : '15rem',
-            margin: '0.5rem 0rem 0 0',
-            
+            width : '100%',
+            margin: '0.1rem',
+
         },
+        'category':{
+            color : 'gray',
+            backgroundColor:'#F3F17D'
+        }
         
     }
     

@@ -7,11 +7,6 @@ export default function CartWidget(props) {
   
 const {getTotalProducts} = useCart();
 
-if (getTotalProducts()>0) {
-  let span = document.getElementsByClassName('span-cart');
-  span[0].style.display = 'block'
-}
-
   return (
     <>
       <div className='cart-icon-container'>

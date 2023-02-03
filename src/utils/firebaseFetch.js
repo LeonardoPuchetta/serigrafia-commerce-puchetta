@@ -1,8 +1,9 @@
-import { db } from "./firebaseConfig";
+import { db,storage} from "./firebaseConfig";
+
+import { ref ,uploadBytesResumable,getDownloadURL} from "firebase/storage";
+
 import { collection, getDocs,getDoc ,query, where ,doc,
   serverTimestamp,increment,setDoc,updateDoc} from "firebase/firestore";
-
-
 
 // creacion de user en la base 
 export const createUserFetch = async (user) => {
@@ -82,11 +83,15 @@ export const createOrderFetch = async (itemList,totalPrice,user) => {
     date : serverTimestamp(),
     items: itemList,
     total: totalPrice,
+    id: ''
   };
 
   const newOrderRef = doc(collection(db, "orders"));
 
+  //creacion de nueva orden
   await setDoc(newOrderRef, order);
+  //guardamos id de objeto en firebase
+  order.id = newOrderRef.id;
 
   //actualizar stocks en la base 
   itemList.map(async (item)=>{
@@ -102,3 +107,42 @@ export const createOrderFetch = async (itemList,totalPrice,user) => {
 
 
 }
+
+export const createNewProductFetch = async (product) =>{
+
+  const newProductRef = doc(collection(db, "products"));
+
+  await setDoc(newProductRef, product);
+
+}
+//guardado de imagen del producto en el storage de firebase
+export const imageProductUploaderFetch = async (image,name) =>{
+
+  // Crear referencia de almacenamiento en Firebase de las imagenes 
+   const imagesRef = ref(storage,`product-images/${name}`);
+
+  // Subir imagen a Firebase Storage
+
+  const uploadTask = uploadBytesResumable(imagesRef,image);
+  return new Promise((resolve, reject) => {
+    uploadTask.on('state_changed', 
+      (snapshot) => {
+      }, 
+      (error) => {
+        // Handle unsuccessful uploads
+        reject(error)
+      }, 
+      () => {
+        // Handle successful uploads on complete
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          console.log(downloadURL);
+          resolve(downloadURL);
+        });
+      }
+    )
+  })
+
+}
+
+
+

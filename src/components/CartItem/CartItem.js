@@ -18,7 +18,7 @@ const styleImage = {
   return (
     <>
                         <div className='product-detail border'>
-                              <div className='product-detail-image-container' >
+                              <div className='product-detail-image' >
                                 <img src={product.item.imageUrl} style={styleImage} alt='product' />
                               </div>
 
@@ -39,6 +39,6 @@ const styleImage = {
                                 <Button onClick={() => removeItem(product.item.id)} variant="outline-danger">Quitar del carrito</Button>
                               </div>
                         </div>
-                      </>
+    </>
   )
 }

@@ -22,9 +22,6 @@ export default function Item(props) {
 
               <Card.Body>
                     <Card.Title>{item.name}</Card.Title>
-                    {/* <Card.Text>
-                    <strong> $ {item.price} </strong>
-                    </Card.Text> */}
               </Card.Body>
 
               <Link to={`/item/${item.id}`} className='product-detail-link'>

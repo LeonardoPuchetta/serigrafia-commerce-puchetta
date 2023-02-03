@@ -1,11 +1,12 @@
 import React from 'react';
 import './IconButton.css';
 
-const IconButton = ({icon, tooltip, onClick,tooltipOn}) => {
+const IconButton = ({icon, tooltip, onClick,tooltipOn,classIcon,classTooltip}) => {
+    
     return (
-        <button className="icon-button" onClick={onClick}>
+        <button className={classIcon} onClick={onClick}>
             {icon}
-         { tooltipOn? <span className="span-tooltip">{tooltip}</span> : <></>}  
+         { tooltipOn? <span className={classTooltip}>{tooltip}</span> : <></>}  
         </button>
     );
 }

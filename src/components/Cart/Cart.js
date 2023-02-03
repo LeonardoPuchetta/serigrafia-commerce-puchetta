@@ -9,6 +9,7 @@ import { createOrderFetch } from '../../utils/firebaseFetch';
 
 import CartItem from '../CartItem';
 import ModalComponent from '../ModalComponent';
+import OrderReport from '../OrderReport';
 
 
 import './Cart.css';
@@ -36,8 +37,7 @@ const createOrder = async () =>{
     let itemList = getItemList();
     let totalPrice = getTotalPrice();
 
-    await createOrderFetch(itemList,totalPrice,user).then(result =>{
-      console.table(result);
+    await createOrderFetch(itemList,totalPrice,user).then((result,id) =>{
       setOrder(result);
     }).catch(error =>{
       console.log(error)
@@ -78,7 +78,7 @@ const createOrder = async () =>{
                     </div>
                     <div>
                           <ModalComponent title='Compra registrada !' isVisibleModal={isVisibleModal}
-                      handleCloseModal={handleCloseModal} bodyModal={'Gracias por elegirnos'}/>
+                      handleCloseModal={handleCloseModal} bodyModal={<OrderReport order={order}/>}/>
                     </div>
               </div>
         </div>

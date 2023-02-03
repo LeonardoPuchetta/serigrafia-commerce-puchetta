@@ -1,0 +1,12 @@
+.table-order {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .th-order, .td-order {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  .th-order {
+    background-color: lightgray;
+  }

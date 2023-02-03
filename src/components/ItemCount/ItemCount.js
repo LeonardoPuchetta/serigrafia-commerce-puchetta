@@ -26,15 +26,16 @@ export default function ItemCount(props) {
     <div className='item-count'>
         <div className='row-btn-count' >
             
-            <div className='btn-count'>
-                <button size="md"onClick={countDecrement} className='btn-count'>-</button>
+            <div className='col-count'>
+                <button onClick={countDecrement} className='btn-count'>-</button>
             </div>
             <div className='col-count'>
                 <strong>{count}</strong>
             </div>
-            <div className='btn-count'>
-                <button size="md" onClick={countIncrement} className='btn-count'>+</button>
+            <div className='col-count'>
+                <button onClick={countIncrement} className='btn-count'>+</button>
             </div>
+
         </div>
         <div className='row-btn-add' >
             { stock && count ? 

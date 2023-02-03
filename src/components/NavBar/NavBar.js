@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import useAuth from '../../hooks/useAuth';
+import useCart from '../../hooks/useCart';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -13,11 +14,12 @@ import IconButton from './../IconButton/IconButton';
 import {RiLoginBoxFill} from 'react-icons/ri';
 import {RiLogoutBoxFill} from 'react-icons/ri';
 import {FaUserEdit} from 'react-icons/fa';
-
+import {AiFillFileAdd} from 'react-icons/ai';
 
 import ModalComponent from '../ModalComponent';
 import Login from '../Login';
 import Register from '../Register';
+import AddProductForm from '../AddProductForm';
 
 
 import './NavBar.css'
@@ -27,11 +29,13 @@ import logo from './../../assets/hojas.png';
 export default function NavBar(props) {
 
 const {user,logoutUser} = useAuth();
+const {clearCart} = useCart();
 
 const navigate = useNavigate();
 
 const [isVisibleModalLogin,setIsVisibleModalLogin] = useState(false);
 const [isVisibleModalRegister,setIsVisibleModalRegister] = useState(false);
+const [isVisibleModalAddProduct,setIsVisibleModalAddProduct] = useState(false);
 
 const handleCloseModalLogin = () =>{
   setIsVisibleModalLogin(false)
@@ -40,8 +44,15 @@ const handleCloseModalRegister = () =>{
   setIsVisibleModalRegister(false)
 }
 
+const handleCloseModalAddProduct = () =>{
+  setIsVisibleModalAddProduct(false)
+}
+
+
+
 const logout = () =>{
 
+  clearCart();
   logoutUser();
   //redireccionamiento a la home page 
   navigate('/')
@@ -82,23 +93,32 @@ const logout = () =>{
         { !user ? 
           <>
             <ModalComponent title={'Registro de usuario'} bodyModal={<Register handleCloseModalRegister={handleCloseModalRegister}/>} isVisibleModal={isVisibleModalRegister}
-            handleCloseModal={handleCloseModalRegister}/>
+            handleCloseModal={handleCloseModalRegister} size={'sm'}/>
               <IconButton icon={<FaUserEdit/>} onClick={()=> setIsVisibleModalRegister(true)} 
-                tooltipOn = {true} tooltip={'registro'}/>
+                tooltipOn = {true} tooltip={'registro'} classIcon={'icon-button'} classTooltip={'span-tooltip'}/>
 
 
             <ModalComponent title={'Login de usuario'} bodyModal={<Login handleCloseModalLogin={handleCloseModalLogin}/>} 
-            isVisibleModal={isVisibleModalLogin} handleCloseModal={handleCloseModalLogin}/>
+            isVisibleModal={isVisibleModalLogin} handleCloseModal={handleCloseModalLogin} size={'sm'}/>
               <IconButton icon={<RiLoginBoxFill/>} onClick={()=> setIsVisibleModalLogin(true)} 
-              tooltipOn = {true} tooltip={'login'}/>
+              tooltipOn = {true} tooltip={'login'} classIcon={'icon-button'} classTooltip={'span-tooltip'}/>
               
           </> :
           <>
             <Nav pullright="true">
-              <IconButton icon={<RiLogoutBoxFill/>} onClick={logout} tooltipOn = {true} tooltip={'logout'}/>
+              <IconButton icon={<RiLogoutBoxFill/>} onClick={logout} tooltipOn = {true} tooltip={'logout'}
+              classIcon={'icon-button'} classTooltip={'span-tooltip'}/>
             </Nav>
           </> }
-
+          {
+            (user && user.role =='admin') ?
+             <>
+            <ModalComponent title={'Agregar producto'} bodyModal={<AddProductForm handleCloseModalAddProduct={handleCloseModalAddProduct}/>} isVisibleModal={isVisibleModalAddProduct}
+                handleCloseModal={handleCloseModalAddProduct} size={'lg'}/>
+            <IconButton icon={<AiFillFileAdd/>} onClick={()=> setIsVisibleModalAddProduct(true)} 
+                tooltipOn = {true} tooltip={'agregar producto'} classIcon={'icon-button'} classTooltip={'span-tooltip'}/>
+            </> : <></>
+          }
         {user? <>
         <Nav pullright="true">
           <Link to='/cart' >
