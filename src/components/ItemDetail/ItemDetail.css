@@ -39,7 +39,7 @@
 
 .info-title{
     font-family: 'Lobster', cursive;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 .info-btn{
     display: flex;
@@ -80,6 +80,190 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    
+}
+
+@media (min-width:992px) and (max-width:1199.98px){
+
+
+}
+@media (min-width:768px) and (max-width:991.98px){
+
+    .item-detail{
+        padding: 1rem 1rem 1.5rem 1rem; 
+    }
+    .container-detail-image{
+        margin-right: 1rem;
+        width: 40%;   
+    }
+    .detail-image{
+        
+        
+    }
+    .container-detail-info{
+        float: right;
+        width: 60%;
+        position: relative;
+    }
+    
+    .info-header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .info-title{
+        font-family: 'Lobster', cursive;
+        font-size: 1.9rem;
+    }
+    .info-btn{
+        margin-top: 0.5rem;
+    }
+    .link-btn{
+        margin-left: 0rem;
+        margin-right: 0.5rem;
+    }
+    .info-description{
+        margin-top: 1rem;
+        font-family: 'PT Serif', 'Georgia';
+    }
+    .info-price{
+        margin-top: 1.2rem;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .price{
+        font-size: 2.2rem;
+        font-family: 'Lobster', cursive;
+        color:black;
+    }
+    .stock{
+        font-family: 'PT Serif', 'Georgia';
+        font-size: 1rem;
+    }
+    .buy-btn{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        
+    }
+
+}
+
+@media (min-width:576px) and (max-width:767.98px){
+    .item-detail{
+        padding: 1rem 1.5rem 1.5rem 1.5rem; 
+    }
+    .container-detail-image{
+        margin-right: 0rem;
+        width: 0%;   
+    }
+    .detail-image{
+        display: none;
+    }
+    .container-detail-info{
+        width: 100%;
+    }
+    
+    .info-header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .info-title{
+        font-family: 'Lobster', cursive;
+        font-size: 1.9rem;
+    }
+    .info-btn{
+        margin-top: 0.5rem;
+    }
+    .link-btn{
+        margin-left: 0rem;
+        margin-right: 0.5rem;
+    }
+    .info-description{
+    }
+    .info-price{
+        margin-top: 1.2rem;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .price{
+        font-size: 2.2rem;
+        font-family: 'Lobster', cursive;
+        color:black;
+    }
+    .stock{
+        font-family: 'PT Serif', 'Georgia';
+        font-size: 1rem;
+    }
+    .buy-btn{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        
+    }
+
+
+
+}
+
+@media (min-width:320px) and (max-width:575.98px){
+    .item-detail{
+        padding: 1rem 1.5rem 1.5rem 1.5rem; 
+    }
+    .container-detail-image{
+        margin-right: 0rem;
+        width: 0%;   
+    }
+    .detail-image{
+        display: none;
+    }
+    .container-detail-info{
+        width: 100%;
+    }
+    .info-header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .info-title{
+        font-size: 1.9rem;
+    }
+    .info-btn{
+        margin-top: 0.5rem;
+        
+    }
+    .link-btn{
+        margin-left: 0rem;
+        margin-right: 0.5rem;
+    }
+    .info-description{
+    }
+    .info-price{
+        margin-top: 1.2rem;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .price{
+        font-size: 2.2rem;
+        font-family: 'Lobster', cursive;
+        color:black;
+    }
+    .stock{
+        font-size: 1rem;
+    }
     
 }
 

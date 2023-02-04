@@ -37,7 +37,7 @@ export default function AnimatedButton(props) {
 
         },
         'category':{
-            color : 'gray',
+            color : 'black',
             backgroundColor:'#F3F17D'
         }
         

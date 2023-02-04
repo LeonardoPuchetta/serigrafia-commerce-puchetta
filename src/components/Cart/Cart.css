@@ -34,6 +34,7 @@
 
 .icon-empty-div{
   margin: 1rem;
+  font-size: 2rem;
 }
 
 @media (min-width:992px) and (max-width:1199.98px){

@@ -11,7 +11,8 @@
 }
 
 .cart-icon:hover{
-    color :var(--color-medium-2)
+    /* color :var(--color-medium-2) */
+    color:#92619e;
 }
 
 .span-cart{
@@ -20,9 +21,10 @@
     left: 88%;
     bottom:40%;
     color:black;
-    background-color: #9FEE00;
+    /* background-color: #9FEE00; */
+    background-color: #d857cf;
     border-radius: 1.2rem;
-    padding: 0.1rem 0.15rem 0.1rem 0.15rem;
+    padding: 0.08rem 0.18rem 0.08rem 0.18rem;
     font-size: 0.7rem;
     font-weight: bold;
     

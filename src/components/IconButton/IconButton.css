@@ -7,7 +7,7 @@
     border-radius: 0;
     cursor: pointer;
     margin: 0.6rem 0.5rem 0.4rem 0.6rem ;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
 .icon-button-add{
@@ -54,7 +54,8 @@
 }
 
 .icon-button:hover{
-    color :var(--color-medium-2);
+    /* color :var(--color-medium-2); */
+    color:#92619e;
 }
 .icon-button-add:hover{
     color:#E3492D;
@@ -68,8 +69,9 @@
     width: auto;
     transition: 1.3s;
     border-radius: 0.4rem;
-    background-color: var(--color-medium-2);
-    padding:0.6rem ;
+    background-color: #92619e;
+    padding:0.5rem ;
+    font-weight: bold;
     }
 
 .icon-button-add:hover .span-tooltip-add{
@@ -81,10 +83,10 @@
         transition: 1.3s;
         border-radius: 0.4rem;
         background-color: #F38F7D ;
-        padding:1rem ;
+        padding:0.9rem ;
         height: 1.2rem;
-        font-size: 0.9rem;
-        font-weight: 400;
+        font-size: 0.7rem;
+        font-weight:  bold;
         right:100%;
         
         }

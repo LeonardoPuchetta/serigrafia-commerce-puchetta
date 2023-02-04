@@ -1,7 +1,7 @@
 import React from 'react';
 import Item from '../Item';
 
-import './ItemList.css'
+import './ItemList.css';
 
 export default function ItemList(props) {
 
@@ -17,6 +17,7 @@ const {items} = props;
                     return  (<Item key={item.id} item={item}/>)
                         })
             }
+           
     </div>
     </>
     

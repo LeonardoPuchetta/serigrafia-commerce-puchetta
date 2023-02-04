@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import NavBar from './../components/NavBar';
 import ItemListContainer from './../containers/ItemListContainer';
@@ -8,8 +9,11 @@ import Footer from './../components/Footer';
 import Error404 from '../components/Error404';
 import About from '../components/About';
 
+
+
 export default function Home() {
 
+  
   return (
     <BrowserRouter>
       <NavBar/>

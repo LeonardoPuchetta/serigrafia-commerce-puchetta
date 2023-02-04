@@ -85,6 +85,7 @@ const createOrder = async () =>{
        
     </div> 
     : <>
+    {/* si no hay productos en el carrito */}
       <div className='container container-cart container-empty-cart'>
         <div className='container-empty-cart'>
 

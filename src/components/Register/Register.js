@@ -90,7 +90,7 @@ const register = (e) => {
   </div>
 
   <div className="form-outline col-12">
-    <button type="submit" className="btn btn-primary btn-block col-mb-12 btn-submit-register">Registro</button>
+    <button type="submit" className="btn btn-primary btn-block col-mb-12 btn-submit-register">Registrarse</button>
   </div>
 </div>
 </form>

@@ -17,38 +17,35 @@ export default function Footer() {
   return (
     <div className='footer-container'>
       <div className='footer-superior'>
-          <div className='line-container'><div className='line'></div></div>
-          {/* <IconContext.Provider value={iconCenterStyle}> */}
+          <div className='line-container'>
+            <div className='line'></div>
+          </div>
                   <ul className='social-list-ul'>
                      
                       <li className='social-list-li'>
                         <a href='https://www.linkedin.com/in/leonardo-puchetta' target='_blank'  rel='noreferrer'>
-                          {/* <span><IoLogoLinkedin/></span> */}
                           <img src={linkedinIcon} className='social-icon'/>
                         </a>
                       </li>
                       <li className='social-list-li'>
                         <a href='https://www.instagram.com/' target='_blank'  rel='noreferrer'>
                           <img src={instagramIcon} className='social-icon'/>
-                          {/* <span><IoLogoInstagram/></span> */}
                         </a>
                       </li>
                       <li className='social-list-li'>
                         <a  href='https://www.facebook.com/' target='_blank'  rel='noreferrer'>
                           <img src={facebookIcon} className='social-icon'/>
-                          {/* <span><IoLogoFacebook/></span> */}
                         </a>
                       </li>
                       <li className='social-list-li'>
                         <a href='https://www.youtube.com/' target='_blank'  rel='noreferrer'>
-                          {/* <span><IoLogoYoutube/></span> */}
                           <img src={youtubeIcon} className='social-icon'/>
-
                         </a>
                       </li>
                   </ul>
-          {/* </IconContext.Provider> */}
-          <div className='line-container'><div className='line'></div></div>
+          <div className='line-container'>
+            <div className='line'></div>
+          </div>
           
       </div>
       

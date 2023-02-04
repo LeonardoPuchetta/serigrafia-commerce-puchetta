@@ -10,6 +10,9 @@
     position: sticky;
     top:0;
     z-index: 100;
+    display: flex;
+    align-items: center;
+   
 }
 
 .icon-image{
@@ -17,6 +20,8 @@
     background-color: #ffac9e;
     padding: 0.2rem;
     margin-top: 0.45rem;
+    width: 2.5rem;
+    height: 2.5rem;
 
 }
 
@@ -31,11 +36,14 @@
 .name-commerce{
     margin-left: 0.8rem;
     font-weight: 700;
-    font-size: 1.9rem;
+    font-size: 2.1rem;
     font-family: 'Lobster', cursive;
+    align-items: center;
+
 }
 .name-commerce:hover{
-    color:var(--color-medium-2);
+    /* color:var(--color-medium-2); */
+    color:#92619e;
 }
 
 
@@ -43,14 +51,13 @@
     text-decoration: none;
     color:#000;
     margin: 0.6rem 1rem 0.4rem 0.6rem ;
-    /* font-family: 'Pacifico', cursive; */
     font-size: 1.1rem;
     font-family: 'Quicksand', sans-serif;
 }
 
 
 .navbar-link:hover{
-    color:var(--color-medium-2);
+    color:#92619e;
     text-decoration: none;
    
 }

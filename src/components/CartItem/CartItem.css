@@ -49,6 +49,21 @@
     .product-detail{
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
-  
+    .product-detail-image{
+        display: none;
+    }
+    .product-detail-name{
+        margin:0.5rem 1rem 0 1rem;
+        font-weight: bold;
+        align-items:center;
+        font-size: 1.2rem;
+       
+    }
+    .product-detail-delete{
+        margin:0.5rem;
+       
+        
+    }
 }

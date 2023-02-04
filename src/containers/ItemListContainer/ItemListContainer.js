@@ -1,7 +1,9 @@
-import React , {useState,useEffect,useRef,createRef}from 'react';
+import React , {useState,useEffect}from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList';
 import { getItemListFetch } from '../../utils/firebaseFetch';
+
+import {BsFillArrowUpCircleFill} from 'react-icons/bs'
 
 import './ItemListContainer.css';
 
@@ -18,6 +20,24 @@ useEffect( () => {
 
 },[idCategory]);
 
+const [showScroll, setShowScroll] = useState(false);
+
+  
+  const checkScrollTop = () => {
+    if (!showScroll && window.scrollY > 400) {
+      setShowScroll(true);
+    } else if (showScroll && window.scrollY <= 400) {
+      setShowScroll(false);
+    }
+  };
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  window.addEventListener('scroll', checkScrollTop);
+
+
 
   return (
     <>
@@ -27,7 +47,11 @@ useEffect( () => {
 
     <div className='container item-list-container'>
         <ItemList items={data}/>
+        <button className="scroll-top" onClick={scrollTop} style={{ display: showScroll ? 'flex' : 'none' }}>
+          <BsFillArrowUpCircleFill/>
+        </button>
     </div>
+    
     </>
   )
 }
