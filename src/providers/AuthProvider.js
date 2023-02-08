@@ -1,6 +1,6 @@
 import React , {useState, createContext} from 'react';
 
-import {firebaseSignIn,firebaseIsUser,firebaseSignUp,firebaseClose,createUserFetch } from '../utils/firebaseAuth';
+import {firebaseSignIn,firebaseSignUp,firebaseClose,createUserFetch } from '../utils/firebaseAuth';
 
 export const AuthContext = createContext();
 
@@ -29,13 +29,10 @@ export default function AuthProvider(props){
 
         firebaseSignIn(email,password).then(data =>{
             if (data['user']){
+                setUser(data['user']);
+                // localStorage.setItem('token', data['user']['uid']);
 
-                // const userObject = {
-                //     'email': data['user'].email,
-                //     'id': data['user'].uid
-                // }
-                setUser(data['user'])
-        } else {
+             } else {
             if (data['firebaseError']){
                 setErrorLoginMessage(user['firebaseError'])
             }
@@ -48,6 +45,14 @@ export default function AuthProvider(props){
         firebaseClose();
         setUser(null);
     }
+
+    // const isUser = () => {
+    //  const userDB = firebaseIsUser();
+    //  console.log(userDB)
+    //  setUser(userDB)
+
+    // }
+    
  
 
 

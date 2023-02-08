@@ -20,6 +20,7 @@ export const firebaseSignUp = async (email,password,name,phone) => {
                 'email' : userCredential.user.email,
                 'uid' : userCredential.user.uid,
                 'phone': phone,
+                'role':'client'
             };
             user = userToDataBase;
             createUserFetch(userToDataBase); 
@@ -61,32 +62,34 @@ export const firebaseSignIn = async (email,password) => {
             firebaseError = errorMessage[errorCode];
         });
 
-    await getUserFetch(userFromFireBase.user.uid).then(result =>[
-        user = result
-    ])
+    await getUserFetch(userFromFireBase.user.uid).then(result =>{ user = result })
  
     //retornamos un objeto con usuario y mensaje de error (alguno de los dos es null)
     return ({user,firebaseError})
     }   
     
 //observador de usuario logeado 
-export const firebaseIsUser =  () => {
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-          const uid = user.uid;
-          console.log(uid)
-          return user 
-          // ...
-        } else {
-          // User is signed out
-          // ...
-        }
-      });
-}
+// export const firebaseIsUser = async () => {
+
+//     let uid;
+//     let userDB = null;
+//     await onAuthStateChanged(auth, async (user) => {
+//         if (user) {
+//             uid = user.uid;
+//             console.log(uid);
+//             await getUserFetch(uid).then( result =>{
+//                 userDB  = result;
+//                 console.log(userDB)
+//             }).catch( error =>{console.log(error)}
+//             )
+//         } else { userDB =null }
+//       });
+
+//         return userDB
+// }
 
 //cerrar sesion 
 export const firebaseClose = () => {
-
     signOut(auth).then(() => {
         // Sign-out successful.
       }).catch((error) => {

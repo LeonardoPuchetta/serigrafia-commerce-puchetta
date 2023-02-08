@@ -51,21 +51,21 @@ const register = (e) => {
 <div className="row">
   <div className="form-outline col-12">
     <label className="form-label" htmlFor="nameField">Nombre completo</label>
-    <input type="text" pattern="[A-Za-z]*" title="Por favor ingrese solo letras" 
-    id="nameField" className="form-control form-input" required/>
+    <input type="text" pattern="[A-Za-z]{2,254}*" title="Por favor ingrese solo letras" 
+    id="nameField" className="form-control form-input" placeholder='Juan de los palotes'required />
   </div>
 
   <div className="form-outline col-12">
     <label className="form-label" htmlFor="phoneField">Teléfono</label>
-    <input type="text" pattern="[0-9]*" title="Por favor ingrese solo números" 
-    id="phoneField" className="form-control form-input" required/>
+    <input type="text" pattern="[0-9]{2,254}*" title="Por favor ingrese solo números" 
+    id="phoneField" className="form-control form-input" placeholder='000-000-000' required/>
   </div>
 
   {/* <!-- Email input --> */}
   <div className="form-outline col-12">
     <label className="form-label" htmlFor="emailField">Correo electrónico</label>
     <input type="email" id="emailField" className="form-control form-input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-    title='Ingrese un correo valido ejemplo@gmail.com' required/>
+    title='Ingrese un correo valido ejemplo@gmail.com' placeholder='ejemplo@gmail.com' required/>
   </div>
 
   {/* <!-- Password input --> */}

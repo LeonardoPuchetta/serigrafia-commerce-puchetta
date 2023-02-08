@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Home from "./pages/Home";
 
 import CartProvider from "./providers/CartProvider";
@@ -6,9 +6,6 @@ import AuthProvider from "./providers/AuthProvider";
 
 
 const App = () => {
-
- 
-
 
   return (
     <AuthProvider>
