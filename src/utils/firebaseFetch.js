@@ -99,7 +99,7 @@ export const createOrderFetch = async (itemList,totalPrice,user) => {
       const itemRef = doc(db, "products", item.id); 
 
       await updateDoc(itemRef, {
-        stock : increment (-item.quantity)
+        stock : increment(-item.quantity)
       });
   })
   

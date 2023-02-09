@@ -5,6 +5,7 @@ import ItemCount from '../ItemCount';
 import AnimatedButton from '../AnimatedButton';
 import ModalComponent from '../ModalComponent';
 import IconButton from '../IconButton/IconButton';
+
 import {BsFillBagPlusFill} from 'react-icons/bs';
 import {BsFillBagCheckFill} from 'react-icons/bs';
 
@@ -14,10 +15,9 @@ import useAuth from '../../hooks/useAuth';
 export default function ItemDetail(props) {
 
 const {item}= props;
+
 //traemos el contexto mediante el hook
-const ctx = useCart();
-const {isInCart} = useCart() ; 
-const {user} = useAuth();
+const {isInCart,addItem} = useCart() ; 
 
 const [itemCount,setItemCount] = useState(0);
 const [isVisibleModalAdd,setIsVisibleModalAdd] = useState(false);
@@ -29,7 +29,7 @@ const handleCloseModalAdd = () =>{
 const onAdd = (quantityToAdd) => {
     setItemCount(quantityToAdd);
     //usamos la funcion del contexto para agregar productos al estado global cart
-    ctx.addItem(item,quantityToAdd);
+    addItem(item,quantityToAdd);
 }
 
   return (

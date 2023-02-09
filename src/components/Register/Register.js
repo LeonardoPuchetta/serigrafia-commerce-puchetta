@@ -57,7 +57,7 @@ const register = (e) => {
 
   <div className="form-outline col-12">
     <label className="form-label" htmlFor="phoneField">Teléfono</label>
-    <input type="text" pattern="[0-9]{2,254}*" title="Por favor ingrese solo números" 
+    <input type="text" pattern="[0-9]{2,254}*"  
     id="phoneField" className="form-control form-input" placeholder='000-000-000' required/>
   </div>
 
@@ -71,7 +71,7 @@ const register = (e) => {
   {/* <!-- Password input --> */}
   <div className="form-outline col-12">
     <label className="form-label" htmlFor="passwordField">Contraseña</label>
-    <input type="password" id="passwordField" className="form-control form-input" required/>
+    <input type="password" id="passwordField" className="form-control form-input" placeholder='minimo 6 caracteres' required/>
   </div>
 
    {/* <!-- Password input --> */}

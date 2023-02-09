@@ -1,22 +1,16 @@
 import React ,{useState}from 'react';
 import Button from 'react-bootstrap/Button';
-import AnimatedButton from '../AnimatedButton';
 import useAuth from '../../hooks/useAuth';
-import './ItemCount.css'
+import './ItemCount.css';
 
 export default function ItemCount(props) {
 
     const {user} = useAuth();
-
     const {stock,initial,onAdd,handleCloseModalAdd} = props ;
-
     const [count,setCount] = useState(initial);
 
-
     const countIncrement = () =>{if (count<stock) {setCount(count+1)}}
-
     const countDecrement = () => {if (count>0) {setCount(count-1)}}
-
     const onAddItem = () =>{
 
     

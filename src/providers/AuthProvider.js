@@ -46,16 +46,6 @@ export default function AuthProvider(props){
         setUser(null);
     }
 
-    // const isUser = () => {
-    //  const userDB = firebaseIsUser();
-    //  console.log(userDB)
-    //  setUser(userDB)
-
-    // }
-    
- 
-
-
     return <AuthContext.Provider 
             value={{user,loginUser,registerUser,logoutUser,errorLoginMessage,errorRegisterMessage}}    >
                 {children}

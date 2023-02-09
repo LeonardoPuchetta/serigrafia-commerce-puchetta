@@ -18,6 +18,8 @@ export default function Cart() {
 
 
 const {user} = useAuth();
+const {cart,getTotalProducts,getTotalPrice,clearCart,getItemList} = useCart();
+
 const [isVisibleModal,setIsVisibleModal] = useState(false);
 const [order,setOrder] = useState();
 
@@ -28,9 +30,6 @@ const handleCloseModal = () => {
   clearCart();
 
 };
-
-
-const {cart,getTotalProducts,getTotalPrice,clearCart,getItemList} = useCart();
 
 const createOrder = async () =>{
 

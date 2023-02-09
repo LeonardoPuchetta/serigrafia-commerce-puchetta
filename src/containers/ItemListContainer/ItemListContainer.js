@@ -4,7 +4,6 @@ import ItemList from '../../components/ItemList';
 import { getItemListFetch } from '../../utils/firebaseFetch';
 
 import {BsFillArrowUpCircleFill} from 'react-icons/bs'
-
 import './ItemListContainer.css';
 
 export default function ItemListContainer(props) {

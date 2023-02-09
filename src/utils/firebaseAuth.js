@@ -68,26 +68,6 @@ export const firebaseSignIn = async (email,password) => {
     return ({user,firebaseError})
     }   
     
-//observador de usuario logeado 
-// export const firebaseIsUser = async () => {
-
-//     let uid;
-//     let userDB = null;
-//     await onAuthStateChanged(auth, async (user) => {
-//         if (user) {
-//             uid = user.uid;
-//             console.log(uid);
-//             await getUserFetch(uid).then( result =>{
-//                 userDB  = result;
-//                 console.log(userDB)
-//             }).catch( error =>{console.log(error)}
-//             )
-//         } else { userDB =null }
-//       });
-
-//         return userDB
-// }
-
 //cerrar sesion 
 export const firebaseClose = () => {
     signOut(auth).then(() => {

@@ -1,7 +1,7 @@
 {
   "name": "serigrafia-commerce",
   "version": "0.1.0",
-  "homepage": "https://LeonardoPuchetta.github.io/vivero-commerce-puchetta",
+  "homepage": "https://LeonardoPuchetta.github.io/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
