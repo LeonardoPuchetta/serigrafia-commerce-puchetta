@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React from 'react';
 
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import NavBar from './../components/NavBar';
@@ -9,17 +9,8 @@ import Footer from './../components/Footer';
 import Error404 from '../components/Error404';
 import About from '../components/About';
 
-import useAuth from '../hooks/useAuth';
-
 
 export default function Home() {
-
-  const {user,isUser} = useAuth();
-
-  // useEffect(() => {
-  //   isUser()
-  // }, [])
-  
 
   return (
     <BrowserRouter>

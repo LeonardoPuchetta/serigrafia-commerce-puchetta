@@ -1,6 +1,6 @@
 import React , {useState, createContext} from 'react';
 
-import {firebaseSignIn,firebaseSignUp,firebaseClose,createUserFetch } from '../utils/firebaseAuth';
+import {firebaseSignIn,firebaseSignUp,firebaseClose } from '../utils/firebaseAuth';
 
 export const AuthContext = createContext();
 

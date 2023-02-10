@@ -1,6 +1,6 @@
 import { app } from "./firebaseConfig";
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword 
-,onAuthStateChanged,signOut} from "firebase/auth";
+,signOut} from "firebase/auth";
 import { getUserFetch,createUserFetch } from "./firebaseFetch";
 
 // Initialize Firebase Authentication and get a reference to the service
@@ -40,7 +40,6 @@ export const firebaseSignUp = async (email,password,name,phone) => {
         return ({user,firebaseError})
        
 }
-
 
 //logeo de usuario 
 export const firebaseSignIn = async (email,password) => {
