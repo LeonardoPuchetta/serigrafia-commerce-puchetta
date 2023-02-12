@@ -21,13 +21,12 @@ const App = () => {
       <CartProvider >
         <BrowserRouter>
           <NavBar/>
-          <Routes>
-            <Route path='/vivero-commerce-puchetta' element={<ItemListContainer/>}/>
-            <Route path='/' element={<ItemListContainer/>}/>
-            <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
-            <Route path='/category/:idCategory' element={<ItemListContainer/>}/>
-            <Route path='/cart' element={<Cart/>}/>
-            <Route path='/about' element={<About/>}/>
+          <Routes >
+            <Route path='/vivero-commerce-puchetta/' element={<ItemListContainer/>}/>
+            <Route path='/vivero-commerce-puchetta/item/:idItem' element={<ItemDetailContainer/>}/>
+            <Route path='/vivero-commerce-puchetta/category/:idCategory' element={<ItemListContainer/>}/>
+            <Route path='/vivero-commerce-puchetta/cart' element={<Cart/>}/>
+            <Route path='/vivero-commerce-puchetta/about' element={<About/>}/>
             <Route path='*' element={<Error404/>}/>
           </Routes>  
           <Footer/> 

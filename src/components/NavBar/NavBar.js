@@ -79,15 +79,15 @@ const logout = () =>{
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto" >
           <NavDropdown title="Plantas" id="basic-nav-dropdown" className='dropdown-menu-navbar'>
-              <Link to='/vivero-commerce-puchetta/category/plantas-anuales' className='navbar-link'>Anuales</Link><br/>
-              <Link to='/vivero-commerce-puchetta/category/plantas-perennes' className='navbar-link'>Perennes</Link><br/>
-              <Link to='/vivero-commerce-puchetta/category/plantas-interior' className='navbar-link'>De interior</Link><br/>
+              <Link to='/category/plantas-anuales' className='navbar-link'>Anuales</Link><br/>
+              <Link to='/category/plantas-perennes' className='navbar-link'>Perennes</Link><br/>
+              <Link to='/category/plantas-interior' className='navbar-link'>De interior</Link><br/>
           </NavDropdown>
           
-          <Link to='/vivero-commerce-puchetta/category/arbustos' className='navbar-link'>Arbustos</Link>
-          <Link to='/vivero-commerce-puchetta/category/arboles' className='navbar-link'>Arboles</Link>
-          <Link to='/vivero-commerce-puchetta/category/huerta-organica'className='navbar-link'>Huerta organica</Link>
-          <Link to='/vivero-commerce-puchetta/about'className='navbar-link'>Nosotros</Link>
+          <Link to='/category/arbustos' className='navbar-link'>Arbustos</Link>
+          <Link to='/category/arboles' className='navbar-link'>Arboles</Link>
+          <Link to='/category/huerta-organica'className='navbar-link'>Huerta organica</Link>
+          <Link to='/about'className='navbar-link'>Nosotros</Link>
         </Nav>
         
         { !user ? 
@@ -121,7 +121,7 @@ const logout = () =>{
           }
         {user? <>
         <Nav pullright="true">
-          <Link to='/vivero-commerce-puchetta/cart' >
+          <Link to='/cart' >
             <CartWidget/>
           </Link>
         </Nav> </> :
