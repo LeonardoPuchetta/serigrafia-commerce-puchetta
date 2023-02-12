@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <BrowserRouter>
       <NavBar/>
-      <Routes >
+      <Routes basename='/vivero-commerce-puchetta'>
         <Route path='/' element={<ItemListContainer/>}/>
         <Route path='item/:idItem' element={<ItemDetailContainer/>}/>
         <Route path='/category/:idCategory' element={<ItemListContainer/>}/>

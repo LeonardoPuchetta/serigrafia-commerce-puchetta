@@ -21,7 +21,8 @@ const App = () => {
       <CartProvider >
         <BrowserRouter>
           <NavBar/>
-          <Routes basename="https://LeonardoPuchetta.github.io/vivero-commerce-puchetta">
+          <Routes>
+            <Route path='/vivero-commerce-puchetta' element={<ItemListContainer/>}/>
             <Route path='/' element={<ItemListContainer/>}/>
             <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
             <Route path='/category/:idCategory' element={<ItemListContainer/>}/>
