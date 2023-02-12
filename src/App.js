@@ -17,22 +17,38 @@ import AuthProvider from "./providers/AuthProvider";
 const App = () => {
 
   return (
+    // <AuthProvider>
+    //   <CartProvider >
+    //     <BrowserRouter>
+    //       <NavBar/>
+    //       <Routes >
+    //         <Route path={process.env.PUBLIC_URL + '/'} element={<ItemListContainer/>}/>
+    //         <Route path='/vivero-commerce-puchetta/item/:idItem' element={<ItemDetailContainer/>}/>
+    //         <Route path='/vivero-commerce-puchetta/category/:idCategory' element={<ItemListContainer/>}/>
+    //         <Route path='/vivero-commerce-puchetta/cart' element={<Cart/>}/>
+    //         <Route path='/vivero-commerce-puchetta/about' element={<About/>}/>
+    //         <Route path='*' element={<Error404/>}/>
+    //       </Routes>  
+    //       <Footer/> 
+    // </BrowserRouter>
+    //   </CartProvider>
+    // </AuthProvider>
     <AuthProvider>
-      <CartProvider >
-        <BrowserRouter>
-          <NavBar/>
-          <Routes >
-            <Route path='/vivero-commerce-puchetta/' element={<ItemListContainer/>}/>
-            <Route path='/vivero-commerce-puchetta/item/:idItem' element={<ItemDetailContainer/>}/>
-            <Route path='/vivero-commerce-puchetta/category/:idCategory' element={<ItemListContainer/>}/>
-            <Route path='/vivero-commerce-puchetta/cart' element={<Cart/>}/>
-            <Route path='/vivero-commerce-puchetta/about' element={<About/>}/>
-            <Route path='*' element={<Error404/>}/>
-          </Routes>  
-          <Footer/> 
-    </BrowserRouter>
-      </CartProvider>
-    </AuthProvider>
+    <CartProvider >
+      <BrowserRouter>
+        <NavBar/>
+        <Routes >
+          <Route path={process.env.PUBLIC_URL + '/'} element={<ItemListContainer/>}/>
+          <Route path={process.env.PUBLIC_URL + '/item/:idItem'} element={<ItemDetailContainer/>}/>
+          <Route path={process.env.PUBLIC_URL + '/category/:idCategory'} element={<ItemListContainer/>}/>
+          <Route path={process.env.PUBLIC_URL + '/cart'}  element={<Cart/>}/>
+          <Route path={process.env.PUBLIC_URL + '/about'}  element={<About/>}/>
+          <Route path='*' element={<Error404/>}/>
+        </Routes>  
+        <Footer/> 
+  </BrowserRouter>
+    </CartProvider>
+  </AuthProvider>
      
   )
 }
