@@ -65,7 +65,7 @@ const logout = () =>{
 <Navbar  expand="lg" className='header-navbar'>
     <Container>
       <Navbar.Brand > 
-        <Link to='/' className='navbar-link-img'>
+        <Link to={process.env.PUBLIC_URL + '/'} className='navbar-link-img'>
           <img
                 alt=""
                 src={logo}
