@@ -28,7 +28,7 @@ const register = (e) => {
       //redireccionamiento a la home page
       if(!errorRegisterMessage){ 
       handleCloseModalRegister();
-      navigate('/');
+      navigate(process.env.PUBLIC_URL + '/');
       }
 
     } else {

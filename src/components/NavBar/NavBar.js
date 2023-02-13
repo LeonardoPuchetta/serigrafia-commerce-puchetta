@@ -55,7 +55,7 @@ const logout = () =>{
   clearCart();
   logoutUser();
   //redireccionamiento a la home page 
-  navigate('/')
+  navigate(process.env.PUBLIC_URL + '/');
 }
 
 

@@ -23,7 +23,7 @@ const login = (e) => {
      
       handleCloseModalLogin();
       //redireccionamiento a la home page 
-      navigate('/');
+      navigate(process.env.PUBLIC_URL + '/');
     } else {
 
       let spanAdvice = document.getElementById('span-login-advice');
