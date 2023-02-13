@@ -24,7 +24,7 @@ export default function Item(props) {
                     <Card.Title>{item.name}</Card.Title>
               </Card.Body>
 
-              <Link to={`/item/${item.id}`} className='product-detail-link'>
+              <Link to={process.env.PUBLIC_URL + `/item/${item.id}`} className='product-detail-link'>
                   <AnimatedButton text={'Ver detalle'} type={'default'}/>
               </Link>
         </Card>  
