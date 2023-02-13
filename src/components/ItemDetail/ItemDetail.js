@@ -50,7 +50,7 @@ const onAdd = (quantityToAdd) => {
                             {item.category.map((category,index) => {
                             return ( 
                             <div className='link-btn' key={index}>
-                                <Link to={`/category/${category}`}>
+                                <Link to={process.env.PUBLIC_URL + `/category/${category}`}>
                                     <AnimatedButton type={'category'} text={category}/>
                                 </Link>
                             </div>)
