@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/vivero-commerce-puchetta/static/css/main.4214f300.css",
-    "main.js": "/vivero-commerce-puchetta/static/js/main.da154fa1.js",
+    "main.js": "/vivero-commerce-puchetta/static/js/main.93d6f4c3.js",
     "static/media/hojas.png": "/vivero-commerce-puchetta/static/media/hojas.4a7f77a3754be1580ab7.png",
     "static/media/instagram.svg": "/vivero-commerce-puchetta/static/media/instagram.bdb549e3d96f92fd27945da5b0c46c3f.svg",
     "static/media/linkedin.svg": "/vivero-commerce-puchetta/static/media/linkedin.7a1ea7b6321e5582f9c8bffd0f4b6493.svg",
@@ -9,10 +9,10 @@
     "static/media/youtube.svg": "/vivero-commerce-puchetta/static/media/youtube.1249aa95ceea0abad4fc6a91d5aef4c2.svg",
     "index.html": "/vivero-commerce-puchetta/index.html",
     "main.4214f300.css.map": "/vivero-commerce-puchetta/static/css/main.4214f300.css.map",
-    "main.da154fa1.js.map": "/vivero-commerce-puchetta/static/js/main.da154fa1.js.map"
+    "main.93d6f4c3.js.map": "/vivero-commerce-puchetta/static/js/main.93d6f4c3.js.map"
   },
   "entrypoints": [
     "static/css/main.4214f300.css",
-    "static/js/main.da154fa1.js"
+    "static/js/main.93d6f4c3.js"
   ]
 }
