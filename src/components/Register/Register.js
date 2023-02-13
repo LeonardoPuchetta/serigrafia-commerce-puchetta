@@ -28,7 +28,7 @@ const register = (e) => {
       //redireccionamiento a la home page
       if(!errorRegisterMessage){ 
       handleCloseModalRegister();
-      navigate(process.env.PUBLIC_URL + '/');
+      navigate('/vivero-commerce-puchetta/');
       }
 
     } else {

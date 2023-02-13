@@ -23,8 +23,8 @@ const login = (e) => {
      
       handleCloseModalLogin();
       //redireccionamiento a la home page 
-      navigate(process.env.PUBLIC_URL + '/');
-    } else {
+      navigate('/vivero-commerce-puchetta/');
+      } else {
 
       let spanAdvice = document.getElementById('span-login-advice');
       spanAdvice.style.display = 'contents';
