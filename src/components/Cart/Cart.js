@@ -53,7 +53,7 @@ const createOrder = async () =>{
     <div className='container container-cart'>
 
         <div className='btn-options'>
-            <Link to='/'><Button variant="outline-success">Continuar comprando</Button></Link>
+            <Link to = {process.env.PUBLIC_URL + '/'}><Button variant="outline-success">Continuar comprando</Button></Link>
             <Button  variant="outline-danger" onClick={()=>{clearCart()}}>Vaciar carrito</Button> 
         </div>
         <div className='products-list'>
