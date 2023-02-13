@@ -79,15 +79,15 @@ const logout = () =>{
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto" >
           <NavDropdown title="Plantas" id="basic-nav-dropdown" className='dropdown-menu-navbar'>
-              <Link to='/category/plantas-anuales' className='navbar-link'>Anuales</Link><br/>
-              <Link to='/category/plantas-perennes' className='navbar-link'>Perennes</Link><br/>
-              <Link to='/category/plantas-interior' className='navbar-link'>De interior</Link><br/>
+              <Link to={process.env.PUBLIC_URL + '/category/plantas-anuales'} className='navbar-link'>Anuales</Link><br/>
+              <Link to={process.env.PUBLIC_URL + '/category/plantas-perennes'}  className='navbar-link'>Perennes</Link><br/>
+              <Link to={process.env.PUBLIC_URL + '/category/plantas-interior'} className='navbar-link'>De interior</Link><br/>
           </NavDropdown>
           
-          <Link to='/category/arbustos' className='navbar-link'>Arbustos</Link>
-          <Link to='/category/arboles' className='navbar-link'>Arboles</Link>
-          <Link to='/category/huerta-organica'className='navbar-link'>Huerta organica</Link>
-          <Link to='/about'className='navbar-link'>Nosotros</Link>
+          <Link to={process.env.PUBLIC_URL + '/category/arbustos'}  className='navbar-link'>Arbustos</Link>
+          <Link to={process.env.PUBLIC_URL + '/category/arboles' } className='navbar-link'>Arboles</Link>
+          <Link to={process.env.PUBLIC_URL + '/category/huerta-organica'} className='navbar-link'>Huerta organica</Link>
+          <Link to={process.env.PUBLIC_URL + '/about'} className='navbar-link'>Nosotros</Link>
         </Nav>
         
         { !user ? 
@@ -121,7 +121,7 @@ const logout = () =>{
           }
         {user? <>
         <Nav pullright="true">
-          <Link to='/cart' >
+          <Link to={process.env.PUBLIC_URL + '/cart'} >
             <CartWidget/>
           </Link>
         </Nav> </> :

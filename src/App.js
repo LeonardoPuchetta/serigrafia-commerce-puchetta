@@ -37,12 +37,12 @@ const App = () => {
     <CartProvider >
       <BrowserRouter>
         <NavBar/>
-        <Routes basename={process.env.PUBLIC_URL}>
-          <Route path='/' element={<ItemListContainer/>}/>
-          <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
-          <Route path='/category/:idCategory' element={<ItemListContainer/>}/>
-          <Route path='/cart'  element={<Cart/>}/>
-          <Route path='/about'  element={<About/>}/>
+        <Routes >
+          <Route path={process.env.PUBLIC_URL + '/'} element={<ItemListContainer/>}/>
+          <Route path={process.env.PUBLIC_URL + '/item/:idItem'} element={<ItemDetailContainer/>}/>
+          <Route path={process.env.PUBLIC_URL + '/category/:idCategory'} element={<ItemListContainer/>}/>
+          <Route path={process.env.PUBLIC_URL + '/cart'}  element={<Cart/>}/>
+          <Route path={process.env.PUBLIC_URL + '/about'}  element={<About/>}/>
           <Route path='*' element={<Error404/>}/>
         </Routes>  
         <Footer/> 
