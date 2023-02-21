@@ -42,6 +42,7 @@ const [showScroll, setShowScroll] = useState(false);
     <>
     <div className='container presentation'>
       <p>Bienvenidos a Suculenta, su vivero en línea. Aquí podrá encontrar una amplia variedad de plantas de alta calidad, desde cactus y suculentas hasta árboles frutales y plantas decorativas. También ofrecemos servicios de paisajismo y mantenimiento de jardines para ayudar a crear el hogar verde de sus sueños. Con expertos en jardinería siempre dispuestos a ayudar, estamos seguros de que encontrará la planta perfecta para su hogar. ¡Visítenos en nuestra tienda en línea o en nuestra ubicación física para explorar nuestra selección completa y obtener asesoramiento experto!</p>
+      <p className='p-advice'>Si lo desea puede hacer login con usuario: <strong>leonardopuchetta21@gmail.com</strong> y contraseña: <strong>12345678</strong> y probar funcionalidades de Administrador como <strong>Agregar producto</strong> </p>
     </div>
 
     <div className='container item-list-container'>
